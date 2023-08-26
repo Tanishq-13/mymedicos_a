@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.My_medicos" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">#6BC1F2</item>
+
+    </style>
+
+
+    <style name="Theme.My_medicos" parent="Base.Theme.My_medicos" />
+
+    <!-- Light Mode Theme -->
+    <style name="AppTheme.Light" parent="Theme.AppCompat.Light">
+        <!-- Customize attributes for light mode -->
+    </style>
+
+
+
+</resources>

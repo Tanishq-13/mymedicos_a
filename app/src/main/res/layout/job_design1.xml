@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/_180sdp"
+        app:cardElevation="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        android:backgroundTint="@color/blue"
+        android:layout_height="@dimen/_160sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/job_pos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_medium"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:textStyle="bold"
+            android:textSize="@dimen/_16ssp"
+            android:text="Position"/>
+
+        <TextView
+           android:id="@+id/hosp_name"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/montserrat_medium"
+            android:layout_height="wrap_content"
+            android:text="Hospital Name"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold"/>
+
+
+        <TextView
+            android:id="@+id/job_loc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:fontFamily="@font/montserrat_medium"
+            android:textStyle="bold"
+            android:textSize="@dimen/_12ssp"
+            android:layout_marginTop="@dimen/_80sdp"
+            android:layout_marginStart="@dimen/_10sdp">
+        </TextView>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apply"
+            android:layout_marginTop="@dimen/_120sdp"
+            android:layout_marginStart="@dimen/_100sdp"
+            android:backgroundTint="#7B6BF8"/>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

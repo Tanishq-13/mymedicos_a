@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "78883571163",
+    "project_id": "mymedicos-a5ecc",
+    "storage_bucket": "mymedicos-a5ecc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:78883571163:android:59a867c731336fae3f13fe",
+        "android_client_info": {
+          "package_name": "com.example.my_medicos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "78883571163-h8lj3n1s4j43mrh5tedroq423i4u0v59.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDozGir2yyUN0NsbuQ37pjYuahWuwhRasA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "78883571163-h8lj3n1s4j43mrh5tedroq423i4u0v59.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

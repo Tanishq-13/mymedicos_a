@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/_20ssp"
+            android:drawableRight="@drawable/baseline_person_outline_24"
+            android:drawablePadding="@dimen/_10sdp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:text="Please Login Using Your Account!"/>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="194dp"
+            android:layout_gravity="center"
+            android:src="@drawable/docs" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            android:textSize="@dimen/_12ssp"
+            android:text="Enter Your email and pasword"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/emainin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_32sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_32sdp"
+                    app:boxStrokeErrorColor="#6BC1F2">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/emailedit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/baseline_email_24"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:hint="Enter Email"
+                        android:inputType="text|textEmailAddress" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/passin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_32sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_32sdp"
+                    app:boxStrokeErrorColor="#6BC1F2"
+
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="#6BC1F2"
+                    app:passwordToggleTintMode="multiply">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/passedit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/baseline_lock_24"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:hint="Enter Password"
+                        android:inputType="text|textPassword"
+                        android:password="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/forgot_pass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Forgot Password?"
+                    android:textColor="@color/blue"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="@dimen/_32sdp"
+                    />
+                <Button
+                    android:id="@+id/lgn_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Login"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_16ssp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="@dimen/_40sdp"
+                    android:layout_marginStart="@dimen/_40sdp"
+                    android:backgroundTint="@color/blue"
+
+                    android:layout_marginTop="@dimen/_12sdp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/line"
+                        android:layout_weight="1"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Or"
+                        android:textColor="@color/blue"
+                        android:textStyle="bold"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/line"
+                        android:layout_weight="1"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/googlesignin"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginStart="@dimen/_40sdp"
+                    android:layout_marginEnd="@dimen/_40sdp"
+                    android:text="Continue With Google"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textSize="@dimen/_16ssp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/btnbg"
+                    />
+
+                <TextView
+                    android:id="@+id/createacc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dont have an Account? Register"
+                    android:textColor="@color/blue"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+
+                    android:layout_marginTop="@dimen/_12sdp"/>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

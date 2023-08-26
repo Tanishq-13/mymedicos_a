@@ -1,0 +1,14 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.My_medicos" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">#6BC1F2</item>
+    </style>
+
+
+    <!-- Dark Mode Theme -->
+    <style name="AppTheme.Dark" parent="Theme.AppCompat">
+        <!-- Customize attributes for dark mode -->
+    </style>
+</resources>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Mymedicos"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.My_medicos"
+        tools:targetApi="31">
+        <activity
+            android:name=".UgexamsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PgprepActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UniversityupdatesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PostCmeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ResetPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NewsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PublicationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CmeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EmployeeHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PostJobActivity"
+            android:exported="false"
+            android:parentActivityName=".JobsActivity" />
+        <activity
+            android:name=".JobsActivity"
+            android:exported="false"
+            android:parentActivityName=".HomeActivity" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChooseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GetstartedActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

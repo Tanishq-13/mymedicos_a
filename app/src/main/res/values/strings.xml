@@ -1,0 +1,129 @@
+<resources>
+    <string name="app_name">my_medicos</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string-array name="speciality">
+        <item>-Select your speciality-</item>
+        <item>
+Anesthesia and Critical Care</item>
+        <item>Allergic Medicine</item>
+        <item>
+Bariatrics Surgery</item>
+        <item>CTVS Surgery</item>
+        <item>
+Cardiology</item>
+        <item>Cosmetic Surgery</item>
+        <item>Critical Care Medicine</item>
+        <item>Dermatology</item>
+        <item>Diabetology</item>
+        <item>Dental</item>
+        <item>Emergency Medicine </item>
+        <item>ENT</item>
+        <item>Endocrinology</item>
+        <item>Family Medicine</item>
+        <item>
+Fetal Medicine</item>
+        <item>Geriatrics</item>
+        <item>General Medicine</item>
+        <item>General Surgery</item>
+        <item>GI Surgery</item>
+        <item>Gynec Oncology</item>
+        <item>Hematology</item>
+        <item>Infectious Disease</item>
+        <item>Infertility</item>
+        <item>Intervention Radiology</item>
+        <item>Microbiology</item>
+        <item>Medical Oncology</item>
+        <item>Medical GI</item>
+        <item>Neonatology</item>
+        <item>Nephrology</item>
+        <item>Neurology</item>
+        <item>Neurosurgery</item>
+        <item>OBJ</item>
+        <item>Opthalmologist</item>
+        <item>Orthopedics</item>
+        <item>Pediatrics</item>
+        <item>Pediatric Cardiologist</item>
+        <item>Plastic Surgery</item>
+        <item>Psychiatry</item>
+        <item>Pulmonology</item>
+        <item>Radiodiagnosis</item>
+        <item>Reproductive Medicine</item>
+        <item>Surgical GI</item>
+        <item>Surgical Oncology </item>
+        <item>Transplant Surgery</item>
+        <item>Trauma and Sports</item>
+        <item>Urology</item>
+        <item>Vascular Surgery</item>
+
+
+    </string-array>
+
+    <string-array name="mode">
+        <item>-Select mode-</item>
+        <item>Online</item>
+        <item>Offline</item>
+
+    </string-array>
+
+
+        <string-array name="indian_cities">
+                <item>-Select city-</item>
+                <item>New Delhi</item>
+                <item>Mumbai</item>
+                <item>Bangalore</item>
+                <item>Chennai</item>
+                <item>Kolkata</item>
+                <item>Hyderabad</item>
+                <item>Jaipur</item>
+                <item>Pune</item>
+                <item>Ahmedabad</item>
+                <item>Chandigarh</item>
+                <item>Varanasi</item>
+        </string-array>
+
+
+        <string-array name="indian_medical_universities">
+                <item>-Select university-</item>
+                <item>All India Institute of Medical Sciences (AIIMS)</item>
+                <item>Armed Forces Medical College (AFMC)</item>
+                <item>Christian Medical College (CMC), Vellore</item>
+                <item>Post Graduate Institute of Medical Education and Research (PGIMER)</item>
+                <item>Jawaharlal Institute of Postgraduate Medical Education and Research (JIPMER)</item>
+                <item>King George\'s Medical University (KGMU)</item>
+                <item>Banaras Hindu University (BHU) - Institute of Medical Sciences</item>
+                <item>Madras Medical College (MMC)</item>
+                <item>Grant Medical College and Sir JJ Group of Hospitals</item>
+                <item>Seth GS Medical College (GSMC)</item>
+                <item>Kasturba Medical College (KMC)</item>
+                <item>AIIMS Delhi (All India Institute of Medical Sciences)</item>
+        </string-array>
+
+        <string-array name="medical_subjects">
+                <item>-Select Subject-</item>
+                <item>Anatomy</item>
+                <item>Physiology</item>
+                <item>Biochemistry</item>
+                <item>Pathology</item>
+                <item>Microbiology</item>
+                <item>Pharmacology</item>
+                <item>Forensic Medicine</item>
+                <item>PSM (Preventive and Social Medicine)</item>
+                <item>Ophthalmology</item>
+                <item>ENT (Ear, Nose, and Throat)</item>
+                <item>Medicine</item>
+                <item>Surgery</item>
+                <item>Pediatrics</item>
+                <item>Orthopedics</item>
+                <item>PG (Postgraduate)</item>
+                <item>Ever (Evergreen)</item>
+                <item>Psychiatry</item>
+                <item>Radiology</item>
+                <item>Dermatology</item>
+                <item>Statistics</item>
+        </string-array>
+
+
+</resources>

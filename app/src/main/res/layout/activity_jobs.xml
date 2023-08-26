@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".JobsActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/cemtoolbar_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/jobstoolbar"
+                app:title="Jobs"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/white">
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:hint="    Search"
+            android:drawableEnd="@drawable/baseline_search_24"
+            android:background="@drawable/search_bg"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/city"
+                android:background="@drawable/spinner_back"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/_40sdp"/>
+
+            <Spinner
+                android:background="@drawable/spinner_back"
+                android:id="@+id/speciality"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/_40sdp"/>
+
+        </LinearLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/jobtablayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/jobViewpager"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
+
+       <ScrollView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+
+               <GridLayout
+                   android:layout_width="match_parent"
+                   android:orientation="horizontal"
+                   android:layout_marginTop="@dimen/_10sdp"
+                   android:layout_height="wrap_content">
+
+
+                   <androidx.cardview.widget.CardView
+                       android:layout_width="@dimen/_130sdp"
+                       android:backgroundTint="#A1C2C7"
+                       app:cardElevation="@dimen/_10sdp"
+                       app:cardCornerRadius="@dimen/_10sdp"
+                       android:layout_height="@dimen/_100sdp"
+                       android:layout_marginStart="@dimen/_10sdp"
+                       android:layout_marginTop="@dimen/_10sdp">
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Specification"
+                           android:textSize="@dimen/_12sdp"
+                           android:layout_marginTop="@dimen/_10sdp"
+                           android:layout_marginStart="@dimen/_10sdp"/>
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Toltal"
+                           android:textColor="@color/black"
+                           android:layout_marginStart="@dimen/_10sdp"
+                           android:layout_marginTop="@dimen/_40sdp"/>
+
+                       <Button
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Apply"
+                           android:textColor="@color/black"
+                           android:layout_marginTop="@dimen/_60sdp"
+                           android:layout_marginStart="@dimen/_55sdp"/>
+
+
+                   </androidx.cardview.widget.CardView>
+
+                   <androidx.cardview.widget.CardView
+                       android:layout_width="@dimen/_130sdp"
+                       android:backgroundTint="#A1C2C7"
+                       app:cardElevation="@dimen/_10sdp"
+                       app:cardCornerRadius="@dimen/_10sdp"
+                       android:layout_height="@dimen/_100sdp"
+                       android:layout_marginStart="@dimen/_20sdp"
+                       android:layout_marginTop="@dimen/_10sdp">
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Specification"
+                           android:textSize="@dimen/_12sdp"
+                           android:layout_marginTop="@dimen/_10sdp"
+                           android:layout_marginStart="@dimen/_10sdp"/>
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Toltal"
+                           android:textColor="@color/black"
+                           android:layout_marginStart="@dimen/_10sdp"
+                           android:layout_marginTop="@dimen/_40sdp"/>
+
+                       <Button
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Apply"
+                           android:textColor="@color/black"
+                           android:layout_marginTop="@dimen/_60sdp"
+                           android:layout_marginStart="@dimen/_55sdp"/>
+
+
+                   </androidx.cardview.widget.CardView>
+
+
+               </GridLayout>
+
+               <GridLayout
+                   android:layout_width="match_parent"
+                   android:orientation="horizontal"
+                   android:layout_height="wrap_content">
+
+
+                   <androidx.cardview.widget.CardView
+                       android:layout_width="@dimen/_130sdp"
+                       android:backgroundTint="#E4C5EF"
+                       app:cardElevation="@dimen/_10sdp"
+                       app:cardCornerRadius="@dimen/_10sdp"
+                       android:layout_height="@dimen/_100sdp"
+                       android:layout_marginStart="@dimen/_10sdp"
+                       android:layout_marginTop="@dimen/_10sdp">
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Specification"
+                           android:textSize="@dimen/_12sdp"
+                           android:layout_marginTop="@dimen/_10sdp"
+                           android:layout_marginStart="@dimen/_10sdp"/>
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Toltal"
+                           android:textColor="@color/black"
+                           android:layout_marginStart="@dimen/_10sdp"
+                           android:layout_marginTop="@dimen/_40sdp"/>
+
+                       <Button
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Apply"
+                           android:textColor="@color/black"
+                           android:layout_marginTop="@dimen/_60sdp"
+                           android:layout_marginStart="@dimen/_55sdp"/>
+
+
+                   </androidx.cardview.widget.CardView>
+
+                   <androidx.cardview.widget.CardView
+                       android:layout_width="@dimen/_130sdp"
+                       android:backgroundTint="#E4C5EF"
+                       app:cardElevation="@dimen/_10sdp"
+                       app:cardCornerRadius="@dimen/_10sdp"
+                       android:layout_height="@dimen/_100sdp"
+                       android:layout_marginStart="@dimen/_20sdp"
+                       android:layout_marginTop="@dimen/_10sdp">
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Specification"
+                           android:textSize="@dimen/_12sdp"
+                           android:layout_marginTop="@dimen/_10sdp"
+                           android:layout_marginStart="@dimen/_10sdp"/>
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Toltal"
+                           android:textColor="@color/black"
+                           android:layout_marginStart="@dimen/_10sdp"
+                           android:layout_marginTop="@dimen/_40sdp"/>
+
+                       <Button
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Apply"
+                           android:textColor="@color/black"
+                           android:layout_marginTop="@dimen/_60sdp"
+                           android:layout_marginStart="@dimen/_55sdp"/>
+
+
+                   </androidx.cardview.widget.CardView>
+
+
+               </GridLayout>
+
+               <GridLayout
+                   android:layout_width="match_parent"
+                   android:orientation="horizontal"
+                   android:layout_height="wrap_content">
+
+
+                   <androidx.cardview.widget.CardView
+                       android:layout_width="@dimen/_130sdp"
+                       android:backgroundTint="#A1C2C7"
+                       app:cardElevation="@dimen/_10sdp"
+                       app:cardCornerRadius="@dimen/_10sdp"
+                       android:layout_height="@dimen/_100sdp"
+                       android:layout_marginStart="@dimen/_10sdp"
+                       android:layout_marginTop="@dimen/_10sdp">
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Specification"
+                           android:textSize="@dimen/_12sdp"
+                           android:layout_marginTop="@dimen/_10sdp"
+                           android:layout_marginStart="@dimen/_10sdp"/>
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Toltal"
+                           android:textColor="@color/black"
+                           android:layout_marginStart="@dimen/_10sdp"
+                           android:layout_marginTop="@dimen/_40sdp"/>
+
+                       <Button
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Apply"
+                           android:textColor="@color/black"
+                           android:layout_marginTop="@dimen/_60sdp"
+                           android:layout_marginStart="@dimen/_55sdp"/>
+
+
+                   </androidx.cardview.widget.CardView>
+
+                   <androidx.cardview.widget.CardView
+                       android:layout_width="@dimen/_130sdp"
+                       android:backgroundTint="#A1C2C7"
+                       app:cardElevation="@dimen/_10sdp"
+                       app:cardCornerRadius="@dimen/_10sdp"
+                       android:layout_height="@dimen/_100sdp"
+                       android:layout_marginStart="@dimen/_20sdp"
+                       android:layout_marginTop="@dimen/_10sdp">
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Specification"
+                           android:textSize="@dimen/_12sdp"
+                           android:layout_marginTop="@dimen/_10sdp"
+                           android:layout_marginStart="@dimen/_10sdp"/>
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Toltal"
+                           android:textColor="@color/black"
+                           android:layout_marginStart="@dimen/_10sdp"
+                           android:layout_marginTop="@dimen/_40sdp"/>
+
+                       <Button
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Apply"
+                           android:textColor="@color/black"
+                           android:layout_marginTop="@dimen/_60sdp"
+                           android:layout_marginStart="@dimen/_55sdp"/>
+
+
+                   </androidx.cardview.widget.CardView>
+
+
+               </GridLayout>
+
+               <GridLayout
+                   android:layout_width="match_parent"
+                   android:orientation="horizontal"
+                   android:layout_height="wrap_content">
+
+
+                   <androidx.cardview.widget.CardView
+                       android:layout_width="@dimen/_130sdp"
+                       android:backgroundTint="#E4C5EF"
+                       app:cardElevation="@dimen/_10sdp"
+                       app:cardCornerRadius="@dimen/_10sdp"
+                       android:layout_height="@dimen/_100sdp"
+                       android:layout_marginStart="@dimen/_10sdp"
+                       android:layout_marginTop="@dimen/_10sdp">
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Specification"
+                           android:textSize="@dimen/_12sdp"
+                           android:layout_marginTop="@dimen/_10sdp"
+                           android:layout_marginStart="@dimen/_10sdp"/>
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Toltal"
+                           android:textColor="@color/black"
+                           android:layout_marginStart="@dimen/_10sdp"
+                           android:layout_marginTop="@dimen/_40sdp"/>
+
+                       <Button
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Apply"
+                           android:textColor="@color/black"
+                           android:layout_marginTop="@dimen/_60sdp"
+                           android:layout_marginStart="@dimen/_55sdp"/>
+
+
+                   </androidx.cardview.widget.CardView>
+
+                   <androidx.cardview.widget.CardView
+                       android:layout_width="@dimen/_130sdp"
+                       android:backgroundTint="#E4C5EF"
+                       app:cardElevation="@dimen/_10sdp"
+                       app:cardCornerRadius="@dimen/_10sdp"
+                       android:layout_height="@dimen/_100sdp"
+                       android:layout_marginStart="@dimen/_20sdp"
+                       android:layout_marginTop="@dimen/_10sdp">
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Specification"
+                           android:textSize="@dimen/_12sdp"
+                           android:layout_marginTop="@dimen/_10sdp"
+                           android:layout_marginStart="@dimen/_10sdp"/>
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Toltal"
+                           android:textColor="@color/black"
+                           android:layout_marginStart="@dimen/_10sdp"
+                           android:layout_marginTop="@dimen/_40sdp"/>
+
+                       <Button
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Apply"
+                           android:textColor="@color/black"
+                           android:layout_marginTop="@dimen/_60sdp"
+                           android:layout_marginStart="@dimen/_55sdp"/>
+
+
+                   </androidx.cardview.widget.CardView>
+
+
+               </GridLayout>
+
+               <GridLayout
+                   android:layout_width="match_parent"
+                   android:orientation="horizontal"
+                   android:layout_height="wrap_content">
+
+
+                   <androidx.cardview.widget.CardView
+                       android:layout_width="@dimen/_130sdp"
+                       android:backgroundTint="#A1C2C7"
+                       app:cardElevation="@dimen/_10sdp"
+                       app:cardCornerRadius="@dimen/_10sdp"
+                       android:layout_height="@dimen/_100sdp"
+                       android:layout_marginStart="@dimen/_10sdp"
+                       android:layout_marginTop="@dimen/_10sdp">
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Specification"
+                           android:textSize="@dimen/_12sdp"
+                           android:layout_marginTop="@dimen/_10sdp"
+                           android:layout_marginStart="@dimen/_10sdp"/>
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Toltal"
+                           android:textColor="@color/black"
+                           android:layout_marginStart="@dimen/_10sdp"
+                           android:layout_marginTop="@dimen/_40sdp"/>
+
+                       <Button
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Apply"
+                           android:textColor="@color/black"
+                           android:layout_marginTop="@dimen/_60sdp"
+                           android:layout_marginStart="@dimen/_55sdp"/>
+
+
+                   </androidx.cardview.widget.CardView>
+
+                   <androidx.cardview.widget.CardView
+                       android:layout_width="@dimen/_130sdp"
+                       android:backgroundTint="#A1C2C7"
+                       app:cardElevation="@dimen/_10sdp"
+                       app:cardCornerRadius="@dimen/_10sdp"
+                       android:layout_height="@dimen/_100sdp"
+                       android:layout_marginStart="@dimen/_20sdp"
+                       android:layout_marginTop="@dimen/_10sdp">
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Specification"
+                           android:textSize="@dimen/_12sdp"
+                           android:layout_marginTop="@dimen/_10sdp"
+                           android:layout_marginStart="@dimen/_10sdp"/>
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Toltal"
+                           android:textColor="@color/black"
+                           android:layout_marginStart="@dimen/_10sdp"
+                           android:layout_marginTop="@dimen/_40sdp"/>
+
+                       <Button
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Apply"
+                           android:textColor="@color/black"
+                           android:layout_marginTop="@dimen/_60sdp"
+                           android:layout_marginStart="@dimen/_55sdp"/>
+
+
+                   </androidx.cardview.widget.CardView>
+
+
+               </GridLayout>
+
+               <GridLayout
+                   android:layout_width="match_parent"
+                   android:orientation="horizontal"
+                   android:layout_height="wrap_content">
+
+
+                   <androidx.cardview.widget.CardView
+                       android:layout_width="@dimen/_130sdp"
+                       android:backgroundTint="#E4C5EF"
+                       app:cardElevation="@dimen/_10sdp"
+                       app:cardCornerRadius="@dimen/_10sdp"
+                       android:layout_height="@dimen/_100sdp"
+                       android:layout_marginStart="@dimen/_10sdp"
+                       android:layout_marginTop="@dimen/_10sdp">
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Specification"
+                           android:textSize="@dimen/_12sdp"
+                           android:layout_marginTop="@dimen/_10sdp"
+                           android:layout_marginStart="@dimen/_10sdp"/>
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Toltal"
+                           android:textColor="@color/black"
+                           android:layout_marginStart="@dimen/_10sdp"
+                           android:layout_marginTop="@dimen/_40sdp"/>
+
+                       <Button
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Apply"
+                           android:textColor="@color/black"
+                           android:layout_marginTop="@dimen/_60sdp"
+                           android:layout_marginStart="@dimen/_55sdp"/>
+
+
+                   </androidx.cardview.widget.CardView>
+
+                   <androidx.cardview.widget.CardView
+                       android:layout_width="@dimen/_130sdp"
+                       android:backgroundTint="#E4C5EF"
+                       app:cardElevation="@dimen/_10sdp"
+                       app:cardCornerRadius="@dimen/_10sdp"
+                       android:layout_height="@dimen/_100sdp"
+                       android:layout_marginStart="@dimen/_20sdp"
+                       android:layout_marginTop="@dimen/_10sdp">
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Specification"
+                           android:textSize="@dimen/_12sdp"
+                           android:layout_marginTop="@dimen/_10sdp"
+                           android:layout_marginStart="@dimen/_10sdp"/>
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Toltal"
+                           android:textColor="@color/black"
+                           android:layout_marginStart="@dimen/_10sdp"
+                           android:layout_marginTop="@dimen/_40sdp"/>
+
+                       <Button
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Apply"
+                           android:textColor="@color/black"
+                           android:layout_marginTop="@dimen/_60sdp"
+                           android:layout_marginStart="@dimen/_55sdp"/>
+
+
+                   </androidx.cardview.widget.CardView>
+
+
+               </GridLayout>
+
+               <GridLayout
+                   android:layout_width="match_parent"
+                   android:orientation="horizontal"
+                   android:layout_height="wrap_content">
+
+
+                   <androidx.cardview.widget.CardView
+                       android:layout_width="@dimen/_130sdp"
+                       android:backgroundTint="#A1C2C7"
+                       app:cardElevation="@dimen/_10sdp"
+                       app:cardCornerRadius="@dimen/_10sdp"
+                       android:layout_height="@dimen/_100sdp"
+                       android:layout_marginStart="@dimen/_10sdp"
+                       android:layout_marginTop="@dimen/_10sdp">
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Specification"
+                           android:textSize="@dimen/_12sdp"
+                           android:layout_marginTop="@dimen/_10sdp"
+                           android:layout_marginStart="@dimen/_10sdp"/>
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Toltal"
+                           android:textColor="@color/black"
+                           android:layout_marginStart="@dimen/_10sdp"
+                           android:layout_marginTop="@dimen/_40sdp"/>
+
+                       <Button
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Apply"
+                           android:textColor="@color/black"
+                           android:layout_marginTop="@dimen/_60sdp"
+                           android:layout_marginStart="@dimen/_55sdp"/>
+
+
+                   </androidx.cardview.widget.CardView>
+
+                   <androidx.cardview.widget.CardView
+                       android:layout_width="@dimen/_130sdp"
+                       android:backgroundTint="#A1C2C7"
+                       app:cardElevation="@dimen/_10sdp"
+                       app:cardCornerRadius="@dimen/_10sdp"
+                       android:layout_height="@dimen/_100sdp"
+                       android:layout_marginStart="@dimen/_20sdp"
+                       android:layout_marginTop="@dimen/_10sdp">
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Specification"
+                           android:textSize="@dimen/_12sdp"
+                           android:layout_marginTop="@dimen/_10sdp"
+                           android:layout_marginStart="@dimen/_10sdp"/>
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Toltal"
+                           android:textColor="@color/black"
+                           android:layout_marginStart="@dimen/_10sdp"
+                           android:layout_marginTop="@dimen/_40sdp"/>
+
+                       <Button
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Apply"
+                           android:textColor="@color/black"
+                           android:layout_marginTop="@dimen/_60sdp"
+                           android:layout_marginStart="@dimen/_55sdp"/>
+
+
+                   </androidx.cardview.widget.CardView>
+
+
+               </GridLayout>
+
+               <GridLayout
+                   android:layout_width="match_parent"
+                   android:orientation="horizontal"
+                   android:layout_height="wrap_content">
+
+
+                   <androidx.cardview.widget.CardView
+                       android:layout_width="@dimen/_130sdp"
+                       android:backgroundTint="#E4C5EF"
+                       app:cardElevation="@dimen/_10sdp"
+                       app:cardCornerRadius="@dimen/_10sdp"
+                       android:layout_height="@dimen/_100sdp"
+                       android:layout_marginStart="@dimen/_10sdp"
+                       android:layout_marginTop="@dimen/_10sdp">
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Specification"
+                           android:textSize="@dimen/_12sdp"
+                           android:layout_marginTop="@dimen/_10sdp"
+                           android:layout_marginStart="@dimen/_10sdp"/>
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Toltal"
+                           android:textColor="@color/black"
+                           android:layout_marginStart="@dimen/_10sdp"
+                           android:layout_marginTop="@dimen/_40sdp"/>
+
+                       <Button
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Apply"
+                           android:textColor="@color/black"
+                           android:layout_marginTop="@dimen/_60sdp"
+                           android:layout_marginStart="@dimen/_55sdp"/>
+
+
+                   </androidx.cardview.widget.CardView>
+
+                   <androidx.cardview.widget.CardView
+                       android:layout_width="@dimen/_130sdp"
+                       android:backgroundTint="#E4C5EF"
+                       app:cardElevation="@dimen/_10sdp"
+                       app:cardCornerRadius="@dimen/_10sdp"
+                       android:layout_height="@dimen/_100sdp"
+                       android:layout_marginStart="@dimen/_20sdp"
+                       android:layout_marginTop="@dimen/_10sdp">
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Specification"
+                           android:textSize="@dimen/_12sdp"
+                           android:layout_marginTop="@dimen/_10sdp"
+                           android:layout_marginStart="@dimen/_10sdp"/>
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Toltal"
+                           android:textColor="@color/black"
+                           android:layout_marginStart="@dimen/_10sdp"
+                           android:layout_marginTop="@dimen/_40sdp"/>
+
+                       <Button
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Apply"
+                           android:textColor="@color/black"
+                           android:layout_marginTop="@dimen/_60sdp"
+                           android:layout_marginStart="@dimen/_55sdp"/>
+
+
+                   </androidx.cardview.widget.CardView>
+
+
+               </GridLayout>
+
+           </LinearLayout>
+       </ScrollView>
+
+    </LinearLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:clickable="true"
+        android:src="@android:drawable/ic_input_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
