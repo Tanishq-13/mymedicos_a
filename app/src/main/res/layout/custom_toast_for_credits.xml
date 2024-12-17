@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/customToastLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/download_ppt"
+    android:layout_gravity="center">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/doneanime"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleX="2"
+        android:scaleY="2"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/missed"
+        app:lottie_speed="1" />
+
+
+    <TextView
+        android:id="@+id/customToastText"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:paddingEnd="@dimen/_10sdp"
+        android:text="Answer all Questions"
+        android:textColor="@color/unselected"
+        android:textSize="16sp" />
+</LinearLayout>

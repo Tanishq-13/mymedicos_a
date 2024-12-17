@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_marginHorizontal="@dimen/_10ssp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bkforthecouponapplied"
+    android:gravity="center"
+    android:layout_gravity="center">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/coupon_like"
+        app:lottie_speed="1" />
+
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_15sdp"
+        android:textColor="@color/unselected"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_8ssp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:fontFamily="@font/inter_semibold"
+        android:text="WELCOME50" />
+
+    <TextView
+        android:id="@+id/dialog_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter"
+        android:layout_marginVertical="@dimen/_8ssp"
+        android:textStyle="normal"
+        android:textSize="@dimen/_12ssp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:text="Get one Exam for completely free to attend." />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:dividerColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/dialog_button"
+            android:layout_width="0dp"
+            android:paddingVertical="@dimen/_10ssp"
+            android:fontFamily="@font/inter_semibold"
+            android:paddingHorizontal="@dimen/_10ssp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Accept"
+            android:background="@color/unselected"
+            android:layout_gravity="center"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

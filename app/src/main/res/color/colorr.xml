@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Selected state with golden color -->
+    <item android:color="#DAB805" android:state_checked="true"/> <!-- Golden color when checked -->
+    <!-- Default state with black color -->
+    <item android:color="#DAB805" />
+</selector>

@@ -1,0 +1,15 @@
+<!-- res/menu/prepration_indexing_fragments.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_pgnotes"
+        android:icon="@drawable/home_svgrepo_com2"
+        android:title="Index" />
+    <item
+        android:id="@+id/navigation_pgtwgt"
+        android:icon="@drawable/task_list_svgrepo_com"
+        android:title="CWT" />
+    <item
+        android:id="@+id/navigation_pgswgt"
+        android:icon="@drawable/notes_svgrepo_com"
+        android:title="SwGT" />
+</menu>

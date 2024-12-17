@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_it"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/selected_background"
+    android:clickable="true"
+    android:elevation="2dp"
+    android:focusable="true"
+    android:padding="12dp"
+    android:layout_margin="8dp">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- Radio Button -->
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/radio_plan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:buttonTint="@color/colorr" />
+
+        <!-- Number of Months -->
+        <TextView
+            android:id="@+id/number_of_months"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:text="1 Month"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <!-- Original Price with Strike-through -->
+        <TextView
+            android:id="@+id/original_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₹1348.65"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp" />
+
+        <!-- Discounted Price -->
+        <TextView
+            android:id="@+id/discounted_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="₹999"
+            android:fontFamily="@font/inter_semibold"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>

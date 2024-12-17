@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="specialization_options">
+        <item>Medicine</item>
+        <item>Pediatric</item>
+        <item>Surgery</item>
+    </string-array>
+
+</resources>

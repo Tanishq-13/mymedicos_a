@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Outer shape (rectangle with stroke) -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#00000000"/> <!-- Transparent fill color for the hole -->
+            <stroke
+                android:width="@dimen/_10sdp"
+                android:color="#E0F6F1"/> <!-- Adjust stroke width and color here -->
+        </shape>
+    </item>
+
+    <item android:top="@dimen/_10sdp"
+        android:right="@dimen/_10sdp"
+        android:bottom="@dimen/_10sdp"
+        android:left="@dimen/_10sdp">
+        <shape android:shape="oval">
+            <solid android:color="#00000000"/> <!-- Transparent fill color for the hole -->
+            <corners android:radius="@dimen/_10ssp" />
+        </shape>
+    </item>
+</layer-list>

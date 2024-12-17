@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/swipeRefreshLayout"
+    android:background="@color/backgroundcolor"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/swipeforslider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/backgroundcolor"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/appBarLayout">
+
+                        <com.mancj.materialsearchbar.MaterialSearchBar
+                            android:id="@+id/searchBar"
+                            android:layout_width="match_parent"
+                            android:background="@color/unselected"
+                            android:padding="@dimen/_1sdp"
+                            android:outlineSpotShadowColor="@color/black"
+                            android:layout_height="wrap_content"
+                            app:mt_hint="Search your favorite book"
+                            app:mt_placeholder="Search Slides"
+                            app:mt_navIconEnabled="true"
+                            app:mt_maxSuggestionsCount="10"
+                            app:mt_speechMode="false" />
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/slideshowpptlistcategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="@dimen/_5sdp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints"
+                        android:layout_marginVertical="@dimen/_5ssp"
+                        tools:layout_editor_absoluteX="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="10dp">
+
+                        <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+                            android:id="@+id/slideshowcarousel"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            app:showNavigationButtons="false"
+                            app:showCaption="false"
+                            app:autoPlay="true"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingVertical="@dimen/_5ssp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="@dimen/_5sdp"
+                            android:text="Featured"
+                            android:fontFamily="@font/inter"
+                            android:textSize="@dimen/_12ssp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            app:dividerColor="@color/unselected"/>
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/featured"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="@dimen/_10sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingVertical="@dimen/_5ssp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="@dimen/_5sdp"
+                            android:text="Premium Slides"
+                            android:fontFamily="@font/inter"
+                            android:textSize="@dimen/_12ssp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            app:dividerColor="@color/unselected"/>
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/slideshowpptlist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="@dimen/_10sdp"
+                        android:layout_marginVertical="@dimen/_5ssp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingVertical="@dimen/_5ssp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            app:dividerColor="@color/unselected"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="@dimen/_5sdp"
+                            android:text="SEND YOUR SLIDER"
+                            android:textColor="@color/unselected"
+                            android:fontFamily="@font/inter"
+                            android:textSize="@dimen/_12ssp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            app:dividerColor="@color/unselected"/>
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/unselected"
+                        android:textSize="@dimen/_12sdp"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:paddingHorizontal="@dimen/_15sdp"
+                        android:layout_height="wrap_content"
+                        android:text="Want to be a part of the Community, Share your Slides with us."/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/_10sdp"
+                        android:layout_height="wrap_content"
+                        android:text="Presentations, Documents, Infographics, and more"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:id="@+id/opentheuserupload"
+                        android:background="@color/blue"
+                        android:padding="@dimen/_10sdp"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        android:fontFamily="@font/inter_extrabold"
+                        android:textStyle="bold"
+                        android:layout_marginHorizontal="@dimen/_20sdp"
+                        android:textColor="@color/backgroundcolor"
+                        android:textSize="@dimen/_16sdp"
+                        android:layout_height="wrap_content"
+                        android:text="Upload"/>
+
+                </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/connectfinal"/>
+
+            </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

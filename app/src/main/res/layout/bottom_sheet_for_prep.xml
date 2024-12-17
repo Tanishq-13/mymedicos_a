@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/flag_transparent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/purchasetitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@color/backgroundcolor"
+        android:gravity="center"
+        android:text="START PREPARATION"
+        android:textColor="@color/unselected"
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="bold" />
+
+    <SeekBar
+        android:id="@+id/swipeSeekBar"
+        android:background="@drawable/categorydark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_40sdp"
+        android:thumbOffset="@dimen/_12sdp"
+        android:thumb="@drawable/custom_thumb_for_prep"
+        android:progressDrawable="@drawable/custom_track_for_prep" />
+
+</LinearLayout>

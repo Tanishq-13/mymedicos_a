@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<integer-array name="salary_range_values">
+    <item>1000</item>
+    <item>10000000</item>
+</integer-array>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <stroke android:color="@color/unselected"/>
+    <stroke android:width="@dimen/_1sdp"/>
+    <solid android:color="@color/backgroundcolor"/> <!-- Adjust the opacity here (40 is the opacity) -->
+    <corners android:radius="100dp"/> <!-- Set the border radius (adjust the value as needed) -->
+</shape>

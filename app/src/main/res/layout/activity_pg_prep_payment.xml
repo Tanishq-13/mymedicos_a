@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:paddingEnd="@dimen/_10ssp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            app:menu="@menu/home_menu">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/backtothehomefrompg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="@dimen/_10sdp"
+                        android:src="@drawable/arrow_bk"
+                        android:layout_marginEnd="@dimen/_10sdp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/inter"
+                        android:id="@+id/toptext"
+                        android:textSize="@dimen/_22sdp"
+                        android:text="Heading">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/creditscreen"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/backgroundcolor"
+                    android:layout_gravity="center"
+                    android:gravity="end"
+                    android:paddingVertical="5dp"
+                    android:paddingHorizontal="5dp"
+
+                    android:layout_weight="0.5"
+                    android:orientation="horizontal">
+                    <ImageButton
+                        android:id="@+id/star_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:src="@drawable/star_selector"
+                        android:background="@null"
+                        android:stateListAnimator="@animator/star_state_animator"
+                        />
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:id="@+id/scrl1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/quizNameTextView1"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toolbar"
+                android:fontFamily="@font/inter_semibold"
+                android:gravity="center"
+                android:padding="@dimen/_5ssp"
+                android:text="Quiz Name"
+                android:textSize="@dimen/_16ssp" />
+
+            <TextView
+                android:id="@+id/DueDate1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Due Date:22nd April "
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/unselected"
+                android:fontFamily="@font/inter"
+                android:layout_below="@id/quizNameTextView"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_8sdp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:padding="@dimen/_2sdp"
+                        android:id="@+id/sharelayout"
+                        android:clickable="true"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:src="@drawable/shr"
+                            >
+
+                        </ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Share"
+                            android:layout_marginLeft="@dimen/_2sdp"
+                            android:textSize="@dimen/_14sdp"
+                            app:layout_constraintStart_toEndOf="@+id/imageView4"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_2sdp">
+
+                        <ImageView
+                            android:id="@+id/imageView5"
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:layout_marginLeft="@dimen/_2sdp"
+                            android:src="@drawable/unlock">
+
+                        </ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_8sdp"
+                            android:text="Unlocked"
+                            android:textSize="@dimen/_14sdp"
+                            app:layout_constraintStart_toEndOf="@+id/imageView4"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_8sdp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="#F4F4F4"
+                    android:padding="@dimen/_8sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <ImageButton
+                        android:id="@+id/imageButton6"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:background="?android:selectableItemBackground"
+                        android:src="@drawable/bkmrk"
+                        android:scaleType="centerInside" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bookmark"
+                        android:fontFamily="@font/inter"
+                        android:layout_marginLeft="@dimen/_4sdp"
+                        android:layout_gravity="top"
+                        android:textSize="@dimen/_13ssp"
+                        app:layout_constraintStart_toEndOf="@+id/imageView4"
+                        app:layout_constraintTop_toTopOf="parent"/>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:paddingHorizontal="@dimen/_10ssp"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_8sdp"
+                android:orientation="vertical">
+
+
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginVertical="@dimen/_5ssp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/mins"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="@dimen/_5ssp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No Time Limit"
+                            android:fontFamily="@font/inter_semibold"
+                            android:textSize="@dimen/_12ssp"
+                            android:textColor="#6C6C6C"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Duration"
+                            android:fontFamily="@font/inter_semibold"
+                            android:textSize="@dimen/_10ssp"
+                            android:textColor="@color/grey"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginVertical="@dimen/_5ssp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/questions"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="@dimen/_5ssp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="25 Questions - 100 Marks"
+                            android:fontFamily="@font/inter_semibold"
+                            android:textSize="@dimen/_12ssp"
+                            android:textColor="#6C6C6C"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Scoring details"
+                            android:fontFamily="@font/inter_semibold"
+                            android:textSize="@dimen/_10ssp"
+                            android:textColor="@color/grey"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginVertical="@dimen/_5ssp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/language"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="@dimen/_5ssp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="English"
+                            android:fontFamily="@font/inter_semibold"
+                            android:textSize="@dimen/_12ssp"
+                            android:textColor="#6C6C6C"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Language"
+                            android:fontFamily="@font/inter_semibold"
+                            android:textSize="@dimen/_10ssp"
+                            android:textColor="@color/grey"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/instruction_scroll_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/_2sdp"
+        app:layout_constraintTop_toBottomOf="@+id/scrl1"
+        android:paddingHorizontal="@dimen/_8sdp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomcard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_5ssp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/instructions_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Instructions"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/instructions_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1. The Question Palette will show the status of each question using the following symbols: ..."
+                android:fontFamily="@font/inter_semibold"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/second_instruction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2. The test has 5 sections. The total duration of the test is 210 minutes."
+                android:fontFamily="@font/inter_semibold"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/third_instruction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3. You have the option to view and answer ..."
+                android:fontFamily="@font/inter_semibold"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginBottom="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/dividerwillcomehere"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:dividerThickness="@dimen/_1ssp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomcard"
+        app:dividerColor="@color/unselected"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottomcard"
+        android:layout_width="match_parent"
+        android:elevation="@dimen/_10ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_5ssp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_10ssp"
+            android:paddingBottom="@dimen/_10ssp"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/agreeCheckboxpg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="I have read all the instructions"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingVertical="@dimen/_5ssp"
+                android:gravity="center"
+                android:elevation="@dimen/_10ssp"
+                android:id="@+id/startexamination1"
+                android:background="@drawable/backofpgmaterials"
+                android:clickable="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Start Examination"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/unselected"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:paddingLeft="@dimen/_8sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_below="@id/scoringTextView"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

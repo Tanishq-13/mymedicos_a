@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundcolor"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="@dimen/_8ssp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/backgroundcolor"
+            style="@style/CustomTabLayout"
+            android:scrollbars="none"
+            app:tabMode="scrollable">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/livepg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:text="LIVE" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/upcomingpg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UPCOMING" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/pastpg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PAST" />
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:dividerColor="@color/white"
+            app:dividerThickness="@dimen/_1ssp"/>
+
+        <ImageView
+            android:id="@+id/filter"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_12ssp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:src="@drawable/coupon_svgrepo_com"
+            android:paddingHorizontal="@dimen/_10ssp"/>
+
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dropdown"
+
+        android:paddingRight="@dimen/_6ssp"
+        android:visibility="gone"
+       android:layout_margin="@dimen/_3sdp"
+        android:paddingVertical="@dimen/_8ssp"
+
+
+        android:background="@drawable/spinner_background_pg"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/sort_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:spinnerMode="dropdown" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:src="@drawable/dropdown_icon" />
+
+    </RelativeLayout>
+<!--    <Spinner-->
+<!--        android:id="@+id/sort_spinner"-->
+<!--        android:layout_margin="@dimen/_2ssp"-->
+
+<!--        android:paddingHorizontal="@dimen/_12ssp"-->
+<!--        android:spinnerMode="dropdown"-->
+
+<!--        android:paddingVertical="@dimen/_8ssp"-->
+<!--        android:background="@drawable/spinner_background_pg"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:visibility="visible" />-->
+<androidx.viewpager2.widget.ViewPager2
+android:id="@+id/viewPager"
+android:layout_width="match_parent"
+android:layout_height="100dp"
+android:layout_weight="1" />
+</LinearLayout>

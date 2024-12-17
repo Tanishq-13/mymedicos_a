@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/nestedofresult"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/backgroundcolor"
+    android:fitsSystemWindows="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@color/backgroundcolor"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="@dimen/_5sdp"
+            android:id="@+id/topresultbar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_bk"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="@dimen/_8sdp"
+                android:id="@+id/backbtnfromresult"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:text="Result"
+                android:padding="@dimen/_5sdp"
+                android:gravity="start"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="bold"
+                android:textColor="@color/unselected"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear"
+            app:layout_constraintTop_toBottomOf="@+id/topresultbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="10dp"
+            android:orientation="vertical">
+            <FrameLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center">
+
+                <!-- Circular Progress Bar -->
+                <ProgressBar
+                    android:id="@+id/circularProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:progress="70"
+                    android:progressDrawable="@drawable/circular_progress_bar_circular" />
+
+                <!-- TextView container to show the score number and label -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_gravity="center">
+
+                    <!-- Score Number -->
+                    <TextView
+                        android:id="@+id/tv_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="7"
+                        android:textSize="24sp"
+                        android:textColor="@android:color/black" />
+
+                    <!-- Score Label -->
+                    <TextView
+                        android:id="@+id/tv_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="score"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/darker_gray" />
+                </LinearLayout>
+
+            </FrameLayout>
+            <TextView
+                android:id="@+id/greeting"
+                android:layout_width="wrap_content"
+                android:paddingVertical="@dimen/_2sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:background="@drawable/categoryblackkkkkk"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Outstanding"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:textColor="@color/unselected"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/questions"
+                    android:text="Unanswered questions : "
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/inter"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/unselected"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    android:id="@+id/totqc"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/inter"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/answered"
+                    android:text="Answered : "
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/inter"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/unselected"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    android:id="@+id/answeredc"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/inter"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/correct"
+                    android:text="Correct Answers : "
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/inter"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/unselected"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    android:id="@+id/correctanswercounter"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/inter"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    android:textColor="#32F407"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/incorrect"
+                    android:text="Incorrect Answers : "
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/inter"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/unselected"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    android:id="@+id/incorrectanswercounter"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/inter"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    android:textColor="#EC0505"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_5sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Number of Questions : "
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/inter"
+                    android:textSize="@dimen/_12sdp"
+                    android:id="@+id/total"
+                    android:textStyle="bold"
+                    android:textColor="@color/unselected"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    android:id="@+id/totalanswwercounter"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/inter"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/unselected"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_5sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Marks Obtained : "
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/inter"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/unselected"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    android:id="@+id/result_score1"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/inter_extrabold"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    android:textColor="#0040FF"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/quizid"
+                    android:text="Quiz ID : "
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/inter"
+                    android:textSize="@dimen/_14sdp"
+
+                    android:textStyle="bold"
+                    android:textColor="@color/unselected"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    android:id="@+id/quizidc"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/inter"
+                    android:textSize="@dimen/_14sdp"
+
+                    android:textStyle="bold"
+                    android:textColor="#484848" />
+
+            </LinearLayout>
+
+
+
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/downloadresult"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:fontFamily="@font/inter_extrabold"-->
+            <!--                android:paddingVertical="@dimen/_5sdp"-->
+            <!--                android:layout_marginTop="@dimen/_10sdp"-->
+            <!--                android:text="Download Report"-->
+            <!--                android:layout_gravity="center"-->
+            <!--                android:background="@drawable/categorydark"-->
+            <!--                android:gravity="center"-->
+            <!--                android:textColor="@color/unselected"-->
+            <!--                android:textSize="@dimen/_14sdp"-->
+            <!--                android:textStyle="bold" />-->
+
+            <TextView
+                android:id="@+id/gotopghome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_extrabold"
+                android:paddingVertical="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Go Home"
+                android:layout_gravity="center"
+                android:background="@drawable/bkofloginnumberwhitewithborder"
+                android:gravity="center"
+                android:textColor="@color/unselected"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detailed Explanation :"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/inter_extrabold"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="gone"
+                android:textStyle="bold"
+                android:textColor="@color/unselected"/>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/resultRecyclerView"
+            android:layout_width="match_parent"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:visibility="gone"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/linear"
+            android:paddingBottom="@dimen/_50sdp"
+            android:orientation="vertical"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
+
+
+
+
+

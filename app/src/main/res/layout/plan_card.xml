@@ -1,0 +1,144 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/pr"
+    android:paddingHorizontal="@dimen/_12sdp"
+    android:layout_marginRight="8dp"
+    app:cardCornerRadius="12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Upper part with plan details -->
+        <LinearLayout
+            android:id="@+id/lin1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="#F8C353"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/planTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Elite Plan"
+                android:textSize="20sp"
+                android:fontFamily="@font/inter_semibold"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/planDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cut The Noise" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Starting at"
+                android:layout_marginTop="16dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    android:id="@+id/planPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₹1,199"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/planDiscount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-15% Discount"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorPrimary"
+                    android:background="@drawable/discount_background"
+                    android:layout_marginStart="8dp"
+                    android:padding="4dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:id="@+id/view4"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="#100202"
+            app:layout_constraintTop_toBottomOf="@id/lin1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- "WHAT YOU'LL GET" TextView -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/whatYoullGet"
+            android:fontFamily="@font/inter_semibold"
+            android:text="WHAT YOU'LL GET"
+            android:paddingHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            app:layout_constraintTop_toBottomOf="@id/view4"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Scrollable area for features -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrl"
+            android:fillViewport="true"
+            app:layout_constraintTop_toBottomOf="@id/whatYoullGet"
+            app:layout_constraintBottom_toTopOf="@id/planButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_16sdp"
+                android:paddingVertical="@dimen/_4sdp"
+                android:id="@+id/planFeaturesLayout">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="8dp">
+                    <!-- Plan Features TextViews will be added here dynamically -->
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- Button pinned at the bottom -->
+        <Button
+            android:id="@+id/planButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Enroll Now"
+            android:fontFamily="@font/inter_semibold"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_12sdp"
+            android:background="@drawable/custom_button_background"
+            android:paddingHorizontal="16dp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

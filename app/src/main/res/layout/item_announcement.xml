@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/viewentirenews"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/thumbnailprep"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/placeholder" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:paddingVertical="@dimen/_5sdp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/preplabel"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/inter"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textColor="@color/unselected" />
+
+                <TextView
+                    android:id="@+id/timeofprep"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:text="Time"
+                    android:gravity="end"
+                    android:textSize="14sp"
+                    android:layout_gravity="end"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/inter"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textColor="#878383" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

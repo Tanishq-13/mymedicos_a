@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundcolor"
+    tools:context=".activities.publications.activity.DetailsActivity">
+
+    <LinearLayout
+        android:id="@+id/toplayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="@dimen/_10ssp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/backtoprevious"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/arrow_bk"
+            android:layout_gravity="center_vertical"
+            android:paddingHorizontal="@dimen/_10ssp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_10ssp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/bookname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="Book Name"
+                    android:fontFamily="@font/inter_semibold"
+                    android:textSize="@dimen/_14ssp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/authorname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Author"
+                android:lines="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/inter"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/focusmode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/_10ssp"
+            android:text="Focus"
+            android:drawablePadding="@dimen/_5ssp"
+            android:drawableStart="@drawable/focus"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:paddingVertical="@dimen/_5ssp"
+            android:background="@drawable/btnforlogin"
+            android:paddingHorizontal="@dimen/_15ssp"
+            android:layout_marginEnd="@dimen/_10ssp"
+            android:fontFamily="@font/inter_semibold"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:padding="@dimen/_5ssp"
+            android:background="@drawable/bkforthequiz"
+            android:elevation="@dimen/_10ssp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="@dimen/_10ssp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/currentpage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01"
+                android:padding="@dimen/_5ssp"
+                android:fontFamily="@font/inter_semibold"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:padding="@dimen/_5ssp"
+                android:fontFamily="@font/inter_semibold"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/totalpage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01"
+                android:padding="@dimen/_5ssp"
+                android:fontFamily="@font/inter_semibold"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/normalmode_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:padding="@dimen/_5ssp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/normalmode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Exit Focus"
+                android:drawablePadding="@dimen/_5ssp"
+                android:drawableStart="@drawable/sun_svgrepo_com"
+                android:layout_gravity="center"
+                android:textColor="@color/unselected"
+                android:paddingVertical="@dimen/_5ssp"
+                android:elevation="@dimen/_10ssp"
+                android:background="@drawable/normalmodebk"
+                android:paddingHorizontal="@dimen/_15ssp"
+                android:layout_marginEnd="@dimen/_10ssp"
+                android:fontFamily="@font/inter_semibold"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:dividerThickness="@dimen/_1ssp"
+        app:dividerColor="@color/unselected"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/seekbarcardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_10ssp"
+        app:cardCornerRadius="@dimen/_5ssp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10ssp"
+            android:orientation="vertical">
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:paddingVertical="@dimen/_5ssp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/leftswipe"
+                    android:background="@drawable/btnforlogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:elevation="@dimen/_10ssp"
+                    android:text="Swipe left"
+                    android:padding="@dimen/_10ssp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="normal" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:dividerColor="@color/white"
+                    app:dividerThickness="@dimen/_1ssp"/>
+
+                <TextView
+                    android:id="@+id/rightswipe"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btnforlogin"
+                    android:text="Swipe right"
+                    android:elevation="@dimen/_10ssp"
+                    android:padding="@dimen/_10ssp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

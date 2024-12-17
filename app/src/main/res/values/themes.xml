@@ -2,19 +2,61 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.My_medicos" parent="Theme.Material3.Light.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-        <item name="colorPrimary">#6BC1F2</item>
-
+        <item name="colorPrimary">@color/unselected</item>
+        <item name="android:navigationBarColor">@color/backgroundcolor</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowLightNavigationBar" tools:ignore="NewApi">false
+        </item> <!-- Set to false for dark icons -->
     </style>
-
 
     <style name="Theme.My_medicos" parent="Base.Theme.My_medicos" />
 
-    <!-- Light Mode Theme -->
-    <style name="AppTheme.Light" parent="Theme.AppCompat.Light">
-        <!-- Customize attributes for light mode -->
+    <style name="Theme.My_medicos.ProductDetail" parent="Base.Theme.My_medicos">
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">false</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.BottomSheetDialog">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="CustomProgressDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@drawable/rounded_background</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowSoftInputMode">stateUnspecified</item>
+        <item name="android:backgroundDimEnabled">false</item>
     </style>
 
 
+    <!-- Base application theme -->
 
+
+    <style name="CustomTabLayout" parent="Widget.Design.TabLayout">
+        <!-- Color for the text of the tabs -->
+        <item name="tabTextColor">#7E7E7E</item>
+        <!-- Color for the selected tab -->
+        <item name="tabSelectedTextColor">@color/unselected</item>
+        <!-- Color for the indicator under the selected tab -->
+        <item name="tabIndicatorColor">@color/unselected</item>
+        <!-- Set custom text appearance for tabs -->
+        <item name="tabTextAppearance">@style/CustomTabTextAppearance</item>
+    </style>
+
+    <style name="CustomTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+    </style>
+
+
+    <style name="Theme.My_medicos.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.My_medicos.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Theme.My_medicos.BlackStatusBar" parent="Base.Theme.My_medicos">
+        <item name="colorPrimaryDark">@color/black</item> <!-- This sets the status bar color -->
+        <item name="android:statusBarColor">@color/black
+        </item> <!-- This also sets the status bar color -->
+    </style>
 </resources>

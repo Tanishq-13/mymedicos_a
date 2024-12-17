@@ -1,0 +1,9 @@
+<!-- res/drawable/category_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@android:color/darker_gray"/>
+    <corners
+        android:topLeftRadius="14dp"
+        android:topRightRadius="4dp"
+        android:bottomRightRadius="8dp"
+        android:bottomLeftRadius="6dp"/>
+</shape>

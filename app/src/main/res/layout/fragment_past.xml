@@ -3,13 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PastFragment">
+    tools:context=".activities.cme.fragment.PastFragment">
 
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Past"
-    android:layout_gravity="center"
-    android:textSize="@dimen/_100sdp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cme_recyclerview_past"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
 </FrameLayout>

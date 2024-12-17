@@ -1,0 +1,51 @@
+<!-- bottom_sheet_no_option_selected.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textViewCorrectOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:text="This"
+        android:elevation="@dimen/_5sdp"
+        android:textStyle="bold"
+        android:padding="16dp"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/textViewNoOptionSelected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_5sdp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="This"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textViewDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:text="This"
+        android:elevation="@dimen/_5sdp"
+        android:padding="16dp"
+        android:textColor="@android:color/black"/>
+
+    <Button
+        android:id="@+id/btnDismiss"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dismiss"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary"
+        android:layout_margin="16dp"/>
+</LinearLayout>

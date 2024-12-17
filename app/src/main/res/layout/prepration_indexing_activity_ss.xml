@@ -1,0 +1,91 @@
+<!-- res/layout/activity_preprationindexing.xml -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/backgroundcolor"
+    android:layout_height="match_parent"
+    tools:context=".activities.neetss.activites.internalfragments.PreprationindexingActivitySS">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toppart"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/backgroundcolor"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/backtothehomefrompg"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="@dimen/_14sdp"
+                android:background="@color/backgroundcolor"
+                android:layout_gravity="center"
+                android:src="@drawable/arrow_bk"/>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                app:title="Loading.."
+                android:layout_width="match_parent"
+                app:titleTextColor="@color/unselected"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/backgroundcolor" />
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintTop_toBottomOf="@id/toppart"
+        app:layout_constraintBottom_toTopOf="@id/bottomappabarpginsider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:elevation="@dimen/_10ssp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/bottomappabarpginsider"
+        app:dividerThickness="@dimen/_1ssp"
+        app:dividerColor="@color/unselected"/>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomappabarpginsider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="BottomAppBar">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationViewpginsiderindexing1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:itemHorizontalTranslationEnabled="true"
+            app:itemIconSize="@dimen/_25sdp"
+            app:itemActiveIndicatorStyle="@drawable/item_tint_selector_pg"
+            app:itemIconTint="@drawable/item_tint_selector_pg"
+            app:itemTextColor="@drawable/item_tint_selector_pg"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/prepration_indexing_fragments" />
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

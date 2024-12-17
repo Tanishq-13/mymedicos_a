@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/shimmercomeup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:lottie_autoPlay="true"
+            android:visibility="visible"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/scoreboardnew"
+            app:lottie_speed="1" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            app:cardCornerRadius="@dimen/_20sdp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/upper_result"
+            android:layout_margin="@dimen/_15sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bkforthequiz"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/_20sdp"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:text="Skill Mastery Challenge"
+                    android:background="@drawable/upper_result"
+                    android:textSize="@dimen/_16sdp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/unselected"
+                    android:fontFamily="@font/inter"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp"
+                    android:text="Unlock Rewards, Showcase Expertise, and Rise to the Top!"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/unselected"
+                    android:fontFamily="@font/inter"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_18sdp"
+                    android:text="Get ready to embark on a thrilling journey of knowledge and skill showcase! Our upcoming feature, the Skill Mastery Challenge, is set to revolutionize the way you gauge and display your domain expertise.\nBy combining your quiz scores and domain-specific skills, we'll rank participants to identify the top three champions. The best part? The leading three contenders won't just gain the glory of being at the pinnacle; they'll also be handsomely rewarded for their demonstrated prowess."
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/unselected"
+                    android:fontFamily="@font/inter"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/_18sdp"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:text="Secure your spot early by preregistering with just 50 credit points, and be among the first to unlock this thrilling opportunity!"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/unselected"
+                    android:fontFamily="@font/inter"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/inter"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp"
+                    android:text="Live Soon..."
+                    android:layout_margin="@dimen/_10sdp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+
+</androidx.core.widget.NestedScrollView>

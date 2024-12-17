@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape
+            android:shape="rectangle">
+
+            <!-- Background color (white) -->
+            <solid android:color="@android:color/white"/>
+            <corners android:radius="@dimen/_4sdp"/>
+            <!-- Border (stroke) -->
+            <stroke
+                android:width="@dimen/_1sdp"
+                android:color="#A7A7A7"/> <!-- Light gray border -->
+
+            <!-- Rounded corners -->
+
+            <!-- Optional padding inside the shape -->
+            <padding
+                android:left="10dp"
+                android:top="10dp"
+                android:right="10dp"
+                android:bottom="10dp"/>
+        </shape>
+    </item>
+</selector>

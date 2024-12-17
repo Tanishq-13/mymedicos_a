@@ -1,60 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout2"
+    android:background="@color/backgroundcolor"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GetstartedActivity">
+    android:gravity="bottom"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/correctanswer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:lottie_autoPlay="true"
+        android:layout_gravity="center"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/new_dc"
+        app:lottie_speed="1" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:visibility="visible"
+        android:id="@+id/parttoshow"
+        android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="@dimen/_280sdp"
-            android:layout_height="@dimen/_280sdp"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:src="@drawable/gsdocs" />
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:dividerColor="@color/unselected"
+                app:dividerThickness="@dimen/_1ssp"/>
+
+            <TextView
+                android:id="@+id/textforheading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/_10ssp"
+                android:textSize="@dimen/_16sdp"
+                android:paddingBottom="@dimen/_5ssp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/unselected"
+                android:textStyle="bold"
+                android:fontFamily="@font/inter"
+                android:text="mymedicos"/>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:dividerColor="@color/unselected"
+                app:dividerThickness="@dimen/_1ssp"/>
+
+        </LinearLayout>
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/textforcoats"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/montserrat_medium"
+            android:paddingHorizontal="@dimen/_10ssp"
+            android:textSize="@dimen/_14sdp"
+            android:paddingBottom="@dimen/_5ssp"
             android:layout_gravity="center"
-            android:text="mymedicos"
-            android:textColor="@color/blue"
-            android:textSize="@dimen/_22ssp"
+            android:gravity="center"
+            android:textColor="@color/unselected"
+            android:textStyle="normal"
+            android:fontFamily="@font/inter"
+            android:text="Bharat’s first premier medical community app, connecting healthcare experts seamlessly"/>
+
+        <TextView
+            android:id="@+id/startButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btnforlogin"
+            android:paddingVertical="@dimen/_12ssp"
+            android:text="Let's Start"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:textSize="@dimen/_12ssp"
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/_30sdp"
-            android:fontFamily="@font/montserrat_medium"
-            android:text="Connecting White Coats"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_18ssp"
-            android:textStyle="italic" />
-
-
-        <Button
-            android:id="@+id/gsbtn2"
+            android:id="@+id/help_support"
             android:layout_width="match_parent"
-            android:layout_marginStart="@dimen/_32sdp"
-            android:layout_marginEnd="@dimen/_32sdp"
-            android:text="Get Started"
-            android:fontFamily="@font/montserrat_medium"
-            android:textSize="@dimen/_16ssp"
-            android:textColor="@color/black"
-            android:backgroundTint="@color/blue"
-            android:layout_marginTop="@dimen/_60sdp"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_10ssp"
+            android:textSize="@dimen/_12ssp"
+            android:paddingBottom="@dimen/_5ssp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/unselected"
+            android:textStyle="normal"
+            android:fontFamily="@font/inter"
+            android:text="Having trouble ? Click here"/>
+
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

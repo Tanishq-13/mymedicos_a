@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginStart="@dimen/_3sdp"
+    android:layout_width="wrap_content"
+    android:elevation="@dimen/_10sdp"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/_8sdp"
+    app:cardUseCompatPadding="true"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_marginBottom="@dimen/_8sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/exclusivebg"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/courseimage"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_width="@dimen/_110sdp"
+            android:layout_height="@dimen/_110sdp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/courseheading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:textSize="@dimen/_12sdp"
+            android:fontFamily="@font/inter_semibold"
+            android:textColor="@color/black"
+            android:text="The Complete AI-Powered Copywriting Course"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_4sdp"/>
+        <TextView
+            android:id="@+id/coursesubheading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:text="Become a Pro Copywriter..."
+            android:fontFamily="@font/inter_semibold"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="#595959"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_8sdp"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

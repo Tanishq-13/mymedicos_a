@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--Qb Tray -->
+    <item
+        android:title="Question Banks"
+        android:icon="@drawable/bookicon"
+        android:id="@+id/qb">
+    </item>
+    <!--Lectures Tray -->
+    <item
+        android:title="Lectures"
+        android:icon="@drawable/lectures"
+        android:id="@+id/lc">
+    </item>
+</menu>

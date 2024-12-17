@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/backgroundcolor"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    tools:context=".activities.utils.UpdatingScreen">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/correctanswer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/updating"
+        app:lottie_speed="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:fontFamily="@font/inter"
+            android:padding="10dp"
+            android:text="The feature is under updates right and will be live back very soon."
+            android:textAlignment="center"
+            android:textColor="@color/unselected"
+            android:textSize="14dp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:background="@drawable/bkforthejobscat"
+            android:fontFamily="@font/inter"
+            android:gravity="center"
+            android:paddingHorizontal="25dp"
+            android:paddingVertical="5dp"
+            android:text="You'll be Notified"
+            android:textAlignment="center"
+            android:textColor="@color/unselected"
+            android:textSize="16dp"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+</RelativeLayout>

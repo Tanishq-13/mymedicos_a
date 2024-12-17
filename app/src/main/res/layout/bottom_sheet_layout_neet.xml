@@ -1,0 +1,138 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Close"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/t1"
+        android:layout_marginEnd="@dimen/_4sdp"/>
+    <!-- Container for the content above the button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/t1"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/_8ssp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Answered"
+                    android:fontFamily="@font/inter"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/answered_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/_30ssp"
+                android:paddingVertical="@dimen/_6sdp"
+                android:text="0"
+                android:fontFamily="@font/inter"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold" />
+            </LinearLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:dividerColor="@color/white"
+                android:layout_weight="0.1"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="In Review"
+                    android:fontFamily="@font/inter"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:id="@+id/unanswered_count"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/_30ssp"
+                android:paddingVertical="@dimen/_6sdp"
+                android:text="0"
+                android:fontFamily="@font/inter"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                android:textColor="@color/unselected"/>
+            </LinearLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="0dp"
+                app:dividerColor="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Unattempted"
+                    android:fontFamily="@font/inter"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:id="@+id/not_visited_count"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/_30ssp"
+                android:paddingVertical="@dimen/_6sdp"
+                android:text="0"
+                android:fontFamily="@font/inter"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <GridView
+            android:id="@+id/grid_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="3"
+            android:verticalSpacing="8dp"
+            android:horizontalSpacing="8dp"
+            android:stretchMode="columnWidth" />
+    </LinearLayout>
+
+    <!-- Close button at the bottom -->
+</androidx.constraintlayout.widget.ConstraintLayout>

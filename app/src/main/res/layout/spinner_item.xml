@@ -1,0 +1,35 @@
+<!-- res/layout/spinner_item.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/backgroundcolor"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/_12ssp"
+    android:paddingVertical="@dimen/_4ssp">
+
+    <TextView
+        android:id="@+id/spinner_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Topic 1"
+        android:fontFamily="@font/inter_semibold"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_12ssp" />
+
+    <TextView
+        android:id="@+id/topics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:text="2 QBanks"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_8ssp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@color/grey" />
+
+    <!-- Change to your dropdown icon -->
+</LinearLayout>

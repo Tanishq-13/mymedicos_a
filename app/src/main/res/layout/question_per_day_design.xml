@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/backgroundcolor"
+    android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/questionsbox"
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/_2sdp"
+            android:background="@color/backgroundcolor"
+            android:orientation="vertical"
+            android:padding="@dimen/_5ssp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:textSize="@dimen/_10sdp"
+                android:fontFamily="@font/inter"
+                android:textAllCaps="true"
+                android:textColor="@color/unselected"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:text="MCQ Based on NEET Pattern 2024"/>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/_5sdp"
+                app:dividerThickness="@dimen/_2sdp"
+                app:dividerColor="@color/green"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/questionspan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="#848C8A"
+                android:layout_marginBottom="@dimen/_5ssp"
+                android:fontFamily="@font/inter_semibold"
+                android:textStyle="normal"
+                android:textAlignment="gravity"
+                android:layout_gravity="start"
+                android:gravity="start"
+                android:text="Updating.."/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/optionA"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/questionsoptionbk"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_1sdp"
+                    android:drawableStart="@drawable/optiona"
+                    android:layout_marginVertical="@dimen/_5ssp"
+                    android:textSize="@dimen/_12ssp"
+                    android:paddingVertical="@dimen/_8ssp"
+                    android:paddingHorizontal="@dimen/_10ssp"
+                    android:textColor="@color/black"
+                    android:textAlignment="gravity"
+                    android:clickable="true"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:text="Option A"/>
+
+                <TextView
+                    android:id="@+id/optionB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/questionsoptionbk"
+                    android:drawableStart="@drawable/optionb"
+                    android:layout_marginHorizontal="@dimen/_1sdp"
+                    android:layout_marginVertical="@dimen/_5ssp"
+                    android:textSize="@dimen/_12ssp"
+                    android:paddingVertical="@dimen/_8ssp"
+                    android:paddingHorizontal="@dimen/_10ssp"
+                    android:textColor="@color/black"
+                    android:textAlignment="gravity"
+                    android:clickable="true"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:text="Option B"/>
+
+            </LinearLayout>
+
+                <TextView
+                    android:id="@+id/optionC"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/questionsoptionbk"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/optionc"
+                    android:layout_marginHorizontal="@dimen/_1sdp"
+                    android:layout_marginVertical="@dimen/_5ssp"
+                    android:textSize="@dimen/_12ssp"
+                    android:paddingVertical="@dimen/_8ssp"
+                    android:paddingHorizontal="@dimen/_10ssp"
+                    android:textColor="@color/black"
+                    android:textAlignment="gravity"
+                    android:clickable="true"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:text="Option C"/>
+
+                <TextView
+                    android:id="@+id/optionD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/questionsoptionbk"
+                    android:drawableStart="@drawable/optiond"
+                    android:layout_marginVertical="@dimen/_5ssp"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_marginHorizontal="@dimen/_1sdp"
+                    android:paddingVertical="@dimen/_8ssp"
+                    android:paddingHorizontal="@dimen/_10ssp"
+                    android:textColor="@color/black"
+                    android:textAlignment="gravity"
+                    android:clickable="true"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:text="Option D"/>
+
+        </LinearLayout>
+
+</LinearLayout>
+

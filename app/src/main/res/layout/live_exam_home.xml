@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_2sdp"
+    android:layout_marginHorizontal="@dimen/_4sdp"
+    app:cardCornerRadius="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/backofpgmaterials"
+        android:padding="16dp">
+
+        <!-- LIVE Text with Circle -->
+        <LinearLayout
+            android:id="@+id/live_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Red Circle -->
+            <View
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/red_circle"
+                android:layout_marginEnd="4dp"/>
+
+            <!-- LIVE Text -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LIVE"
+                android:textStyle="bold"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+        <!-- NEET PG Lock Icon -->
+        <LinearLayout
+            android:id="@+id/neet_pg_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:visibility="gone"
+                android:id="@+id/lock"
+                android:src="@drawable/lock_svgrepo_com" />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:visibility="gone"
+                android:id="@+id/unlock"
+                android:padding="@dimen/_2sdp"
+                android:paddingVertical="@dimen/_4ssp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:src="@drawable/unlock" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NEET PG"
+                android:textStyle="bold"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginStart="4dp"/>
+        </LinearLayout>
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forensic Science Set - 01"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_below="@+id/live_section"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Info Section (MCCs and Time) -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <!-- MCC Icon and Text -->
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/video"
+                android:layout_marginEnd="4dp" />
+
+            <TextView
+                android:id="@+id/mcc_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="200 MCC's"
+                android:textSize="14sp" />
+
+            <!-- Time Icon and Text -->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_timer"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="4dp" />
+
+            <TextView
+                android:id="@+id/time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="210 mins"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <!-- Solve Now Button -->
+        <Button
+            android:id="@+id/solve_now_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Solve now"
+            android:background="@drawable/backofpgmaterials"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/title" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

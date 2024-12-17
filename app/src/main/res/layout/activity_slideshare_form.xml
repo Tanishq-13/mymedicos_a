@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundcolor"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.slideshow.SlideshareFormActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/backbtn"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/arrow_bk"
+                        android:padding="4dp"/>
+
+                    <TextView
+                        android:id="@+id/titletxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_extrabold"
+                        android:gravity="start"
+                        android:layout_gravity="center_vertical"
+                        android:text="Upload and share with others"
+                        android:textColor="@color/unselected"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/desctxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:text="Presentations, Documents, Infographics, and more"
+                    android:textColor="@color/unselected"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/addPdfug"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingHorizontal="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    android:paddingVertical="@dimen/_50ssp"
+                    android:fontFamily="@font/inter"
+                    android:background="@drawable/dotted_border"
+                    android:gravity="center"
+                    android:textSize="@dimen/_12ssp"
+                    android:text="Attach a Document"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textColor="#BAB2B2"/>
+
+                <TextView
+                    android:id="@+id/uploadpdfbtnslideshare"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingHorizontal="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    android:paddingVertical="@dimen/_10ssp"
+                    android:gravity="center"
+                    android:textSize="@dimen/_12ssp"
+                    android:fontFamily="@font/inter"
+                    android:text="Upload"
+                    android:background="@color/backgroundcolor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textColor="@color/unselected"/>
+
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/slideorganiser"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:fontFamily="@font/inter"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/download_ppt"
+                android:hint="Posted By"
+                android:paddingStart="@dimen/_10sdp" />
+
+            <Button
+                android:id="@+id/post_slide"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:textSize="@dimen/_14ssp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:paddingVertical="@dimen/_15sdp"
+                android:textColor="@color/white"
+                android:text="Send for Review" />
+
+        </LinearLayout>
+
+</ScrollView>

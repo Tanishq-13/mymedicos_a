@@ -1,0 +1,99 @@
+<!-- res/layout/item_index.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:id="@+id/payfortheexam"
+    android:orientation="vertical"
+    android:layout_marginBottom="@dimen/_8sdp"
+    android:paddingHorizontal="@dimen/_8sdp">
+<View
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_1ssp"
+    android:background="#D3D3D3">
+
+</View>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/_4sdp"
+    android:orientation="horizontal">
+    <ImageView
+        android:id="@+id/thumbnailImageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/arrow_down" />  <!-- Optional placeholder -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="@dimen/_140sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:fontFamily="@font/inter_semibold"
+            android:paddingHorizontal="@dimen/_10ssp"
+            android:text="Loading..."
+            android:textColor="@color/unselected"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/no_of_ques"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="#6F6F6F"
+            android:fontFamily="@font/inter_semibold"
+            android:paddingHorizontal="@dimen/_10ssp"
+            android:text="25 MCQ's"
+            android:textSize="@dimen/_9sdp" />
+
+        <TextView
+            android:id="@+id/hyoption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#6F6F6F"
+            android:fontFamily="@font/inter_semibold"
+            android:paddingHorizontal="@dimen/_10ssp"
+            android:text="Pro"
+            android:textSize="@dimen/_9sdp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bcg"
+            android:text="Unlock"
+            android:gravity="center"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:paddingLeft="@dimen/_12sdp"
+            android:paddingRight="@dimen/_12sdp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:textColor="@color/white"
+            android:id="@+id/kismat"
+            android:textSize="@dimen/_10sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_2sdp" />
+    </RelativeLayout>
+</LinearLayout>
+
+
+</LinearLayout>
+
+

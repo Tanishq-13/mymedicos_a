@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/_5sdp"
+    android:background="@drawable/categorywhite"
+    android:padding="@dimen/_2sdp"
+    android:elevation="@dimen/_10sdp"
+    app:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/thumbnailslideshow"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/placeholder" />
+
+            <TextView
+                android:id="@+id/typeofslide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:background="@drawable/categorywhite"
+                android:fontFamily="@font/inter"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_2sdp"
+                android:text="type"
+                android:textColor="#6C6969"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/backgroundcolor"
+            android:layout_gravity="bottom"
+            android:padding="@dimen/_5ssp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/slideshowlabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textAllCaps="true"
+                android:textSize="14dp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:textStyle="bold"
+                android:fontFamily="@font/inter"
+                android:maxLines="1"
+                android:textColor="@color/unselected" />
+
+            <TextView
+                android:id="@+id/downloadpptbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Download"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:paddingVertical="@dimen/_5ssp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/downloadslider"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/inter_semibold"
+                android:maxLines="1"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

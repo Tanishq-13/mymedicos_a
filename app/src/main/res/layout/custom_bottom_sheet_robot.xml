@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="40dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/backgroundfortherobotsheet"
+    android:orientation="vertical"
+    android:paddingTop="16dp"
+    android:paddingHorizontal="16dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/linedark"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_8ssp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/robotcall"
+            android:layout_width="100dp"
+            android:layout_marginVertical="@dimen/_5ssp"
+            android:layout_height="100dp"
+            android:elevation="@dimen/_2sdp"
+            android:padding="@dimen/_5ssp"
+            app:lottie_autoPlay="true"
+            android:layout_gravity="center"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/happyrobot"
+            app:lottie_speed="1" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/greetingsrobot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/inter"
+                android:textColor="@color/unselected"
+                android:textStyle="bold"
+                android:text="Greatings!"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_2sdp"
+                android:fontFamily="@font/inter"
+                android:textColor="@color/grey"
+                android:textStyle="bold"
+                android:text="Meet Medy, your new guide through the MyMedicos E-Library. Soon, finding and recommending the perfect reads from our vast medical library will be easier than ever. Stay tuned for the launch!"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

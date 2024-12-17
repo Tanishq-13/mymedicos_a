@@ -1,0 +1,258 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundcolor"
+    tools:context=".activities.publications.activity.PublicationActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroundcolor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:paddingEnd="@dimen/_10ssp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingTop="@dimen/_2sdp"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:menu="@menu/home_menu">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/backtothehomefrompublication"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp"
+                    android:src="@drawable/arrow_bk"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Library"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/_18sdp"
+                    android:fontFamily="@font/inter"/>
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loader"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:visibility="gone"
+        app:lottie_autoPlay="true"
+        android:background="@color/backgroundcolor"
+        android:scaleType="center"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/pgpgp"
+        app:lottie_speed="1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/backgroundcolor"
+        app:layout_constraintTop_toBottomOf="@id/loader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/frame_layout_publication"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardviewbottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:backgroundTint="@color/backgroundcolor"
+            android:background="@color/backgroundcolor"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            app:cardElevation="@dimen/_120sdp">
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/bottombar"
+                android:layout_width="match_parent"
+                android:elevation="@dimen/_50ssp"
+                android:layout_height="wrap_content"
+                app:dividerColor="@color/unselected"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:elevation="@dimen/_50ssp"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:padding="12dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:id="@+id/libicon"
+                        android:layout_height="30dp"
+                        android:src="@drawable/libraryicons"/>
+
+                    <ImageView
+                        android:id="@+id/searchpage"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="30dp"
+                        android:src="@drawable/search"/>
+
+                </LinearLayout>
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="0dp"
+                    app:dividerColor="@color/white"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:padding="12dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/cartpage"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="30dp"
+                        android:src="@drawable/carticon"/>
+
+                    <ImageView
+                        android:id="@+id/contentpage"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="30dp"
+                        android:src="@drawable/contenticobn"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/robotcall"
+                android:layout_width="50dp"
+                android:layout_marginVertical="@dimen/_5ssp"
+                android:layout_height="50dp"
+                android:elevation="@dimen/_2sdp"
+                android:padding="@dimen/_5ssp"
+                android:background="@drawable/bkforbtninpg"
+                app:lottie_autoPlay="true"
+                android:layout_gravity="center"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/medrobot"
+                app:lottie_speed="1" />
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/popuprobot"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/_14sdp"
+            android:paddingBottom="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/backgroundfortherobotsheet"
+            android:orientation="vertical"
+            android:paddingTop="16dp"
+            android:paddingHorizontal="16dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/linedark"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_8ssp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="100dp"
+                    android:layout_marginVertical="@dimen/_5ssp"
+                    android:layout_height="100dp"
+                    android:elevation="@dimen/_2sdp"
+                    android:padding="@dimen/_5ssp"
+                    app:lottie_autoPlay="true"
+                    android:layout_gravity="center"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/happyrobot"
+                    app:lottie_speed="1" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/greetingsrobot"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_14sdp"
+                        android:fontFamily="@font/inter"
+                        android:textColor="@color/unselected"
+                        android:textStyle="bold"
+                        android:text="Greetings!"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_10sdp"
+                        android:paddingVertical="@dimen/_2sdp"
+                        android:fontFamily="@font/inter"
+                        android:textColor="@color/grey"
+                        android:textStyle="bold"
+                        android:text="Meet Medy, your new guide through the MyMedicos E-Library. Soon, finding and recommending the perfect reads from our vast medical library will be easier than ever. Stay tuned for the launch!"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

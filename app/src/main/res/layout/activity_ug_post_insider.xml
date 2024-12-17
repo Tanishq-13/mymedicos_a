@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/backgroundcolor"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.ug.UgPostInsiderActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/backbtn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/arrow_bk"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:padding="4dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="26dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_extrabold"
+                    android:gravity="center"
+                    android:text="Upload Content for UG"
+                    android:textColor="@color/unselected"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:text="Fill the undergiven detailes to post the content"
+                    android:textColor="@color/unselected"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/circularbordersolid"
+                    android:gravity="center"
+                    android:padding="18dp">
+
+                    <EditText
+                        android:id="@+id/ug_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:fontFamily="@font/inter"
+                        android:hint="Title of the Document"
+                        android:inputType="text"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/char_counter_title_ug"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="0/50"
+                    android:textColor="@android:color/darker_gray"
+                    android:paddingEnd="@dimen/_20sdp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/circularbordersolid"
+                android:gravity="center"
+                android:padding="18dp">
+
+                <EditText
+                    android:id="@+id/ug_organiser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:fontFamily="@font/inter"
+                    android:hint="Document Posted By"
+                    android:inputType="text"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/circularbordersolid"
+                android:gravity="center"
+                android:padding="18dp">
+
+                <EditText
+                    android:id="@+id/ug_venu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:minHeight="@dimen/_90sdp"
+                    android:fontFamily="@font/inter"
+                    android:hint="Enter a Cover Letter (Hi John, This is...)"
+                    android:maxLength="2000"
+                    android:inputType="textMultiLine"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/char_counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="0/1000"
+                android:textColor="@android:color/darker_gray"
+                android:paddingEnd="@dimen/_20sdp"/>
+
+            <Spinner
+                android:id="@+id/ugtype"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="@dimen/_10ssp" />
+
+            <Spinner
+                android:id="@+id/ugspeciality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="@dimen/_10ssp" />
+
+            <Spinner
+                android:id="@+id/ugsubspeciality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="@dimen/_10ssp" />
+
+            <Spinner
+                android:id="@+id/ugcity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="@dimen/_10ssp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/circularbordersolid"
+                android:gravity="center"
+                android:padding="18dp">
+
+                <EditText
+                    android:id="@+id/ug_reference"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:fontFamily="@font/inter"
+                    android:hint="Enter the Reference (Arihant Book etc)"
+                    android:inputType="text"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginVertical="@dimen/_12sdp"
+                android:layout_height="match_parent"
+                android:background="@drawable/circularbordersolid"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/addPdfug"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:paddingHorizontal="@dimen/_5ssp"
+                    android:textStyle="bold"
+                    android:paddingVertical="@dimen/_10ssp"
+                    android:gravity="center"
+                    android:textSize="@dimen/_12ssp"
+                    android:text="Select Resume"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textColor="#BAB2B2"/>
+
+                <TextView
+                    android:id="@+id/uploadpdfbtnug"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="match_parent"
+                    android:paddingHorizontal="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    android:paddingVertical="@dimen/_10ssp"
+                    android:gravity="center"
+                    android:textSize="@dimen/_12ssp"
+                    android:text="Upload"
+                    android:background="@drawable/categorydark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textColor="#FFFFFF"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/phonenumbertextll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="10dp"
+                android:fontFamily="@font/inter"
+                android:text="Your Document will be Reviewed by our team and if it fits with the content it'll be live within 48 hrs, Terms &amp; Conditions Applied."
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/post_ug_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/categorydark"
+                android:fontFamily="@font/inter"
+                android:padding="16dp"
+                android:text="Send for Review"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:id="@+id/link_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:text="Facing any Issue ? "
+                    android:textColor="#3c4b5d"
+                    android:textSize="16dip" />
+
+                <TextView
+                    android:id="@+id/connectwithus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:text=" Connect Us"
+                    android:textColor="@color/blue"
+                    android:textSize="16dip" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

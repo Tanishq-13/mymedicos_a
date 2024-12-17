@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefreshLayoutPreparationCategory"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundcolor"
+    android:layout_height="match_parent"
+    tools:context=".activities.fmge.activites.internalfragments.PreparationSubCategoryFmgeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/primecategorytoolbar"
+            android:paddingEnd="@dimen/_10ssp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/backgroundcolor"
+            app:menu="@menu/home_menu">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/backtothehomefromprepsubcategory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_10sdp"
+                        android:src="@drawable/arrow_bk"
+                        android:layout_marginEnd="@dimen/_10sdp"/>
+
+                    <TextView
+                        android:id="@+id/categorytitlepreparation"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Category Name"
+                        android:textAllCaps="true"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/_18sdp"
+                        android:fontFamily="@font/roboto_bold"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/shimmercomeupprep"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:lottie_autoPlay="true"
+            android:visibility="gone"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/shimmer"
+            app:lottie_speed="1" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/categoriesinternalpractice"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
+    </LinearLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

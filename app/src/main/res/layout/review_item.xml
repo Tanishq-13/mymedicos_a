@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/_8sdp"
+    android:layout_marginBottom="@dimen/_8sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/exclusivebg"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_semibold"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:text="Shreya"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.willy.ratingbar.ScaleRatingBar xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/simpleRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srb_clearRatingEnabled="true"
+                app:srb_clickable="true"
+                app:srb_isIndicator="false"
+                app:srb_minimumStars="1"
+                app:srb_numStars="5"
+                app:srb_rating="2"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:srb_scrollable="true"
+                app:srb_starHeight="@dimen/_14sdp"
+                app:srb_starPadding="2dp"
+                app:srb_starWidth="@dimen/_14sdp"
+                app:srb_stepSize="0.5">
+
+            </com.willy.ratingbar.ScaleRatingBar>
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/reviewdesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#484D4D"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:text="Purchased this canon E-3370 printer a couple of days back. The printer seems good though cant fully judge in 2 days. The installation is very easy and simple. Was able to set it with
+            computer thru USB and wifi access thru mobile and laptop, all in about 20 minutes. The feedback by some that the wifi settings was very difficult, is totally wrong and misleading. There is a "
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:textSize="@dimen/_12sdp"
+            android:fontFamily="@font/inter"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12sdp"
+            android:id="@+id/readMoreText"
+            android:text="Read More"
+            android:textColor="#05d3be"
+            android:layout_marginStart="@dimen/_12sdp"/>
+
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#99A3A4"
+            android:text="3 December 2023"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/inter_semibold"/>
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

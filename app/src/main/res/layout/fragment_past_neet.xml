@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.pg.activites.internalfragments.insiderfragments.PastNeetFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewPastExams"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/nocardpg"
+        android:layout_width="match_parent"
+        android:elevation="@dimen/_10ssp"
+        android:background="@drawable/backofpgmaterials"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:cardCornerRadius="@dimen/_8ssp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="@dimen/_10ssp"
+            android:paddingHorizontal="@dimen/_5sdp"
+            android:visibility="visible"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/timer"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                android:layout_gravity="center_horizontal"
+                app:lottie_rawRes="@raw/nointernet"
+                app:lottie_speed="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="There is No Previous Examination record Available."
+                android:textSize="@dimen/_12ssp"
+                android:gravity="center_horizontal"
+                android:textStyle="normal"
+                android:fontFamily="@font/inter_semibold"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/unselected"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Checkout other Upcoming &amp; Live Portals."
+                android:textSize="@dimen/_10ssp"
+                android:gravity="center_horizontal"
+                android:textStyle="normal"
+                android:fontFamily="@font/inter_semibold"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/grey"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

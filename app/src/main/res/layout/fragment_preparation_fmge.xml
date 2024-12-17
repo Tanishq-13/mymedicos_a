@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipeRefreshLayoutPreparation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+
+    tools:context=".activities.pg.activites.internalfragments.PreparationPgFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/baloo_tamma_2_semibold"
+                android:text="Topics">
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_10sdp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="19 Topics . Notes . QBanks . Grand Test">
+
+            </TextView>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="#E3E2E2">
+
+            </View>
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+
+                android:layout_marginBottom="@dimen/_8sdp"
+                app:queryHint="Search Specialities"
+                android:background="@drawable/search_view_background"
+                style="@style/CustomSearchView"
+                app:iconifiedByDefault="false">
+            </androidx.appcompat.widget.SearchView>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="#E3E2E2">
+
+            </View>
+
+
+        </LinearLayout>
+
+        <!-- SegmentTabLayout -->
+        <com.flyco.tablayout.SegmentTabLayout
+            android:id="@+id/tablayoutprep"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:paddingHorizontal="@dimen/_8ssp"
+
+            tl:tl_textSelectColor="@color/black"
+            tl:tl_textUnselectColor="@color/black"
+            tl:tl_textsize="@dimen/_12sdp"
+            tl:tl_divider_width="1dp"
+            tl:tl_divider_color="#C0BEBE"
+
+            tl:tl_divider_padding="@dimen/_4sdp"
+            tl:tl_indicator_corner_radius="@dimen/_3sdp"
+            tl:tl_bar_color="#E6E6E6"
+            tl:tl_indicator_color="@color/white"
+            tl:tl_indicator_margin_bottom="2dp"
+            tl:tl_indicator_margin_left="@dimen/_2sdp"
+            tl:tl_indicator_margin_right="@dimen/_2sdp"
+            tl:tl_indicator_margin_top="2dp"
+            tl:tl_tab_space_equal="true"
+            tl:tl_textBold="BOTH"/>
+
+
+        <!-- FrameLayout for dynamic fragment content -->
+        <FrameLayout
+            android:id="@+id/view_page_prep"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

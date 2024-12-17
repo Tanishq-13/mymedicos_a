@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.publications.activity.mainfragments.HomePublicationFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+                android:id="@+id/libcarousel"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:showBottomShadow="true"
+                app:showTopShadow="false"
+                app:autoPlay="true"
+                app:showCaption="false"
+                app:showNavigationButtons="false" />
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+            <!-- For Recent uploaded -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:paddingTop="@dimen/_5ssp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Best Sellers"
+                    android:paddingEnd="@dimen/_10ssp"
+                    android:fontFamily="@font/inter"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    app:dividerThickness="@dimen/_2sdp"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Get the best readables for you!"
+                android:paddingBottom="@dimen/_5ssp"
+                android:fontFamily="@font/inter"
+                android:layout_gravity="center"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="normal" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recentaddedbooksList"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"/>
+
+            <!-- For TextBooks -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:paddingTop="@dimen/_5ssp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Textbooks &amp; Researches"
+                    android:paddingEnd="@dimen/_10ssp"
+                    android:fontFamily="@font/inter"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    app:dividerThickness="@dimen/_2sdp"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/productList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- For Category -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:paddingVertical="@dimen/_5ssp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Promotions"
+                    android:paddingEnd="@dimen/_10ssp"
+                    android:fontFamily="@font/inter"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    app:dividerThickness="@dimen/_2sdp"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_180sdp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="10dp">
+
+                    <ImageView
+                        android:id="@+id/imagesponsor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:showNavigationButtons="false"
+                        android:scaleType="center"
+                        app:showCaption="false"
+                        app:autoPlay="false"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/specialproductList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:elevation="@dimen/_10sdp" />
+
+            </RelativeLayout>
+
+            <!-- Book of the day -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:paddingTop="@dimen/_5ssp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Book of the Day"
+                    android:paddingEnd="@dimen/_10ssp"
+                    android:fontFamily="@font/inter"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    app:dividerThickness="@dimen/_2sdp"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/bookoftheday"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/continueBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:scaleY="2"
+                    android:scaleX="2"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    app:lottie_autoPlay="true"
+                    android:layout_gravity="start"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/bookoftheday"
+                    app:lottie_speed="1" />
+
+            </RelativeLayout>
+
+            <!-- Promotion Video -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:paddingVertical="@dimen/_5ssp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Watch &amp; Shop Live"
+                    android:paddingEnd="@dimen/_10ssp"
+                    android:fontFamily="@font/inter"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    app:dividerThickness="@dimen/_2sdp"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:paddingBottom="200dp"
+                android:elevation="@dimen/_1sdp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <com.google.android.exoplayer2.ui.StyledPlayerView
+                    android:id="@+id/player_view_library"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/connectfinal"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

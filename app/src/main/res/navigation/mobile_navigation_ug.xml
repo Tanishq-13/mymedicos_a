@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation_ug"
+    app:startDestination="@+id/navigation_ughome">
+
+    <fragment
+        android:id="@+id/navigation_ugform"
+        android:name="com.medical.my_medicos.activities.ug.insideractivities.UgFormFragment"
+        tools:layout="@layout/fragment_ugform" />
+
+    <fragment
+        android:id="@+id/navigation_ughome"
+        android:name="com.medical.my_medicos.activities.ug.insideractivities.UgHomeFragment"
+        tools:layout="@layout/fragment_ug_home" />
+
+</navigation>
+

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".activities.fmge.activites.internalfragments.FmgeExamFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/shimmercomeup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:lottie_autoPlay="true"
+                android:visibility="gone"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/shimmer"
+                app:lottie_speed="1" />
+
+            <ViewFlipper
+                android:id="@+id/viewFlipperpg"
+                android:autoStart="true"
+                android:paddingVertical="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="8dp"
+                    android:paddingHorizontal="15dp"
+                    android:textColor="#595656"
+                    android:fontFamily="@font/inter"
+                    android:text="To the healer weaving hope: positive vibes, dear doctor!"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="In the world of health, your dedication stands out. Good thoughts to you, doctor!"
+                    android:fontFamily="@font/inter"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="#595656"
+                    android:paddingVertical="8dp"
+                    android:paddingHorizontal="15dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Amid challenges, your commitment shines. Positive energy, amazing doctor!"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/inter"
+                    android:textStyle="bold"
+                    android:paddingVertical="8dp"
+                    android:paddingHorizontal="15dp"
+                    android:textColor="#595656"/>
+
+            </ViewFlipper>
+
+            <LinearLayout
+                android:id="@+id/dotsLayoutpg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal"
+                android:gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/exploreanime"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:lottie_autoPlay="true"
+                    android:scaleX="1.2"
+                    android:scaleY="1.2"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/suggestanime"
+                    app:lottie_speed="1" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@color/white"
+                    android:layout_height="wrap_content"
+                    android:text="GRAND EXAMINATIONS"
+                    android:textColor="@color/unselected"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="start"
+                    android:padding="@dimen/_8sdp"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tablayoutpg"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="@dimen/_8ssp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/backgroundcolor"
+                    style="@style/CustomTabLayout"
+                    android:scrollbars="none"
+                    app:tabMode="scrollable">
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/livepg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"
+                        android:text="LIVE" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/upcomingpg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="UPCOMING" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/pastpg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PAST" />
+
+                </com.google.android.material.tabs.TabLayout>
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:dividerColor="@color/white"
+                    app:dividerThickness="@dimen/_1ssp"/>
+
+                <ImageView
+                    android:id="@+id/CouponPopup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/_12ssp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:src="@drawable/coupon_svgrepo_com"
+                    android:paddingHorizontal="@dimen/_10ssp"/>
+
+            </LinearLayout>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/view_pager_pg"
+                android:elevation="@dimen/_10ssp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

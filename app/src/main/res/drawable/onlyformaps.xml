@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <!-- Remove solid fill -->
+            <stroke android:color="#7A797F" android:width="2dp" /> <!-- Add stroke with color and width -->
+            <corners android:radius="100dp" />
+        </shape>
+    </item>
+</selector>

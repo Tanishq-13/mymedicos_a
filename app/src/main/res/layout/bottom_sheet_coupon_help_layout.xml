@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/backgroundcolor"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="@dimen/_10ssp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:text="Concerned about your Data ? Checkout our"
+            android:textSize="@dimen/_10ssp"
+            android:textColor="@color/unselected" />
+
+        <TextView
+            android:id="@+id/check_privacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:fontFamily="@font/inter_semibold"
+            android:text="Privacy Policy"
+            android:textSize="@dimen/_10ssp"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_8ssp"
+        app:dividerThickness="@dimen/_1ssp"
+        app:dividerColor="#C6C6C6"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:text="Want to learn more about mymedicos ? Checkout"
+            android:textSize="@dimen/_10ssp"
+            android:textColor="@color/unselected" />
+
+        <TextView
+            android:id="@+id/check_terms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:fontFamily="@font/inter_semibold"
+            android:text="Terms of use"
+            android:textSize="@dimen/_10ssp"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+</LinearLayout>

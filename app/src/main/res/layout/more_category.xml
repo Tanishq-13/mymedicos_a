@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_5ssp"
+        android:layout_marginHorizontal="@dimen/_5ssp"
+        android:background="@drawable/morecategory"
+        android:gravity="start"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_10ssp"
+        android:paddingVertical="@dimen/_3ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/moretext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="More"
+            android:textSize="@dimen/_10ssp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/arrowformore"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="@dimen/_5ssp"
+            android:src="@drawable/baseline_arrow_right_alt_24"
+            app:riv_mutate_background="true"
+            app:riv_oval="true" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

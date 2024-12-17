@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_4ssp"
+    android:layout_marginVertical="@dimen/_2ssp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/sn_no_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sn no."
+        android:textSize="@dimen/_14ssp"
+        android:background="@drawable/anotherwithbackground"
+        android:paddingHorizontal="@dimen/_10ssp"
+        android:paddingVertical="@dimen/_10ssp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/index_text_view"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_14ssp"
+        android:paddingVertical="@dimen/_10ssp"
+        android:text="Context"
+        android:background="@drawable/onceagainanother"
+        android:paddingHorizontal="@dimen/_4ssp"
+        android:gravity="center" />
+
+</LinearLayout>

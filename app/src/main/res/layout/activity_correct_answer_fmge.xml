@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/backgroundcolor"
+    android:layout_height="match_parent"
+    tools:context=".activities.fmge.animations.CorrectFmgeAnswerActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="false"
+                    app:lottie_rawRes="@raw/congrats"
+                    app:lottie_speed="1" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/correctanswer"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="false"
+                    app:lottie_rawRes="@raw/correct"
+                    app:lottie_speed="1" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Congratulations!"
+                android:textColor="@color/unselected"
+                android:paddingHorizontal="@dimen/_10ssp"
+                android:textStyle="normal"
+                android:layout_gravity="start"
+                android:gravity="start"
+                android:textSize="@dimen/_16sdp"
+                android:fontFamily="@font/inter_semibold"/>
+
+            <TextView
+                android:id="@+id/correctforperdayquestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Correct"
+                android:paddingHorizontal="@dimen/_10ssp"
+                android:layout_gravity="start"
+                android:gravity="start"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:textColor="@color/unselected"
+                android:textStyle="normal"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/inter"/>
+
+            <TextView
+                android:id="@+id/descriptionforperdayquestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:textColor="@color/unselected"
+                android:textStyle="normal"
+                android:textAlignment="textStart"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/inter"/>
+
+            <LinearLayout
+                android:id="@+id/complete"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_40sdp"
+                android:background="@drawable/backofpgmaterials"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Continue"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:textColor="@color/red"
+                    android:textStyle="normal"
+                    android:layout_gravity="end|center_vertical"
+                    android:gravity="end|center_vertical"
+                    android:textSize="@dimen/_14sdp"
+                    android:fontFamily="@font/inter_semibold"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/popupalertbeforeapply"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_10ssp"
+    android:gravity="center"
+    app:cardCornerRadius="@dimen/_10sdp"
+    android:layout_gravity="center_vertical"
+    android:layout_width="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:elevation="@dimen/_10sdp"
+        android:padding="@dimen/_10sdp"
+
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/closebtndialogue"
+            android:layout_width="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_height="wrap_content"
+            android:src="@drawable/close"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_bk_for_message"
+        android:padding="@dimen/_5sdp"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/unselected"
+            android:layout_gravity="center"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:fontFamily="@font/inter_semibold"
+            android:text="Terms &amp; Conditions" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5ssp"
+            android:fontFamily="@font/inter"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:text="1. NEET PG MCQs: Assisted for accuracy; verify independently." />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5ssp"
+            android:fontFamily="@font/inter"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:text="2.Prompt rectification of errors assured; users encouraged to report for immediate resolution, ensuring content reliability." />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5ssp"
+            android:fontFamily="@font/inter"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:text="3.Repetitive Questions: Apologies for inadvertent repetition; ongoing efforts to minimize duplication and enhance user experience." />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5ssp"
+            android:fontFamily="@font/inter"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:text="4.User Responsibility: Users are accountable for verifying, interpreting, and applying NEET PG MCQs; we disclaim liability for any consequences from material use or misuse." />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5ssp"
+            android:fontFamily="@font/inter"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:text="5.Copyright and Intellectual Property: NEET PG MCQs are protected; reproduction, distribution, or modification without proper authorization is prohibited." />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5ssp"
+            android:fontFamily="@font/inter"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:text="6. Feedback and Suggestions: User input is valued; constructive feedback enhances NEET PG MCQs' quality and relevance." />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5ssp"
+            android:fontFamily="@font/inter"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:text="7.Usage Agreement: Accessing and using NEET PG MCQs implies agreement to these terms; continued use constitutes acceptance of any updates or modifications." />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5ssp"
+            android:fontFamily="@font/inter"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:text="8.Contact Information: For inquiries, feedback, or error reporting, reach us at contact@mymedicos.in." />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_5sdp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/agreepg"
+                android:layout_width="0dp"
+                android:paddingVertical="@dimen/_10ssp"
+                android:fontFamily="@font/inter_semibold"
+                android:paddingHorizontal="@dimen/_10ssp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Accept"
+                android:background="@color/unselected"
+                android:layout_gravity="center"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/visit"
+                android:layout_width="0dp"
+                android:paddingVertical="@dimen/_10ssp"
+                android:fontFamily="@font/inter_semibold"
+                android:paddingHorizontal="@dimen/_10ssp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Visit Site"
+                android:background="#B8B8B8"
+                android:layout_marginStart="@dimen/_10ssp"
+                android:layout_gravity="center"
+                android:textColor="@color/unselected"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

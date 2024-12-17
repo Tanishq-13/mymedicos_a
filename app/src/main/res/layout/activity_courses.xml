@@ -1,0 +1,526 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FFFFFF"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Top Image Section -->
+        <ImageView
+            android:id="@+id/topImageView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            tools:src="@tools:sample/avatars" />
+
+        <!-- Rounded Card Content -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-20dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@android:color/white" >
+
+        <!-- Content Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_12sdp">
+
+            <!-- Course Title -->
+            <TextView
+                android:id="@+id/courseTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:text="The Complete AI-Powered Copywriting Course and ChatGPT Course"
+                android:textColor="#000000"
+                android:textSize="@dimen/_17sdp"
+                android:fontFamily="@font/inter_semibold"
+                android:textStyle="bold" />
+
+            <!-- Rating -->
+            <TextView
+                android:id="@+id/courseRating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="⭐ 3.8 (11,982 ratings)"
+                android:textColor="#555555"
+                android:fontFamily="@font/inter_semibold"
+                android:textSize="@dimen/_12sdp" />
+
+<!--            &lt;!&ndash; Divider &ndash;&gt;-->
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_marginVertical="8dp"-->
+<!--                android:background="#E0E0E0" />-->
+
+            <!-- Course Details Header -->
+            <TextView
+                android:id="@+id/courseDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:text="Course Details"
+                android:textColor="#000000"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/inter_semibold"
+                android:textStyle="bold" />
+
+
+            <!-- Course Description -->
+            <TextView
+                android:id="@+id/courseDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:fontFamily="@font/inter"
+                android:text="Become a Pro Copywriter with the complete copywriting and Content Marketing Course. Use ChatGPT, Get 70+ Pro Templates."
+                android:textColor="#909497"
+                android:textSize="@dimen/_12sdp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:background="#E0E0E0" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/open_book_svgrepo_com_5" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Subject"
+                        android:fontFamily="@font/inter"
+                        android:textColor="#7B7D7D"/>
+                    <TextView
+                        android:id="@+id/subjectName"
+                        android:textSize="@dimen/_12sdp"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Dermatology"
+                        android:fontFamily="@font/inter_semibold"
+                        android:textColor="@color/black"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:src="@drawable/person_svgrepo_com" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Instructor"
+                        android:fontFamily="@font/inter"
+                        android:textColor="#7B7D7D"/>
+                    <TextView
+                        android:id="@+id/instructorName"
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/_12sdp"
+
+                        android:layout_height="match_parent"
+                        android:text="Dermatology"
+                        android:fontFamily="@font/inter_semibold"
+                        android:textColor="@color/black"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/globe_svgrepo_com" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Language"
+                        android:fontFamily="@font/inter"
+                        android:textColor="#7B7D7D"/>
+                    <TextView
+                        android:id="@+id/languageName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="en"
+                        android:textSize="@dimen/_12sdp"
+
+                        android:fontFamily="@font/inter_semibold"
+                        android:textColor="@color/black"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/clock_nine_svgrepo_com" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Duration"
+                        android:fontFamily="@font/inter"
+                        android:textColor="#7B7D7D"/>
+                    <TextView
+                        android:id="@+id/duration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="3 Weeks"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="@font/inter_semibold"
+                        android:textColor="@color/black"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Price -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:orientation="horizontal">
+            <TextView
+                android:id="@+id/priceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$49.99"
+                android:textColor="#FF0000"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/sponsoredbg"
+                    android:text="Premium"
+                    android:textColor="@color/white"
+                    android:paddingVertical="@dimen/_1sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:paddingHorizontal="@dimen/_6sdp"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/livedemo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/livedemobg"
+                android:text="Live Demo"
+                android:fontFamily="@font/inter_semibold"
+                android:textColor="#05d3be"
+                android:layout_marginTop="@dimen/_12sdp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/prchs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/enrollbtnbg"
+                android:text="Purchase Now"
+                android:textColor="@color/white"
+                android:fontFamily="@font/inter_semibold"
+                android:layout_marginTop="@dimen/_12sdp"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/thiscourse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="What You'll Get"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <ImageView
+                    android:id="@+id/dwn1"
+                    android:layout_width="@dimen/_14sdp"
+                    android:layout_height="@dimen/_14sdp"
+                    android:src="@drawable/arrowdown_svgrepo_com"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+                <TextView
+                    android:id="@+id/showmore1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Show More"
+                    android:textColor="#05d3be"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/dwn1" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout
+                android:id="@+id/itemList1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✔ Access to all course materials"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✔ Downloadable resources"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✔ Lifetime access"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✔ Certificate of completion"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✔ Acces to Instructor QAs "
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✔ Community forum access"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✔ 24/7 Support"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp" />
+
+                <!-- Add more items here -->
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/whatYoullGet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="This Course Includes"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <ImageView
+                    android:id="@+id/dwn"
+                    android:layout_width="@dimen/_14sdp"
+                    android:layout_height="@dimen/_14sdp"
+                    android:src="@drawable/arrowdown_svgrepo_com"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+                <TextView
+                    android:id="@+id/showmore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Show More"
+                    android:textColor="#05d3be"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/dwn" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout
+                android:id="@+id/itemList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✔ Chapter-wise tests"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✔ Subject-wise tests"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✔ Notes"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✔ Previous-year Questions"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✔ Important Questions "
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✔ One-to-One guidance"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp" />
+
+
+                <!-- Add more items here -->
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/Desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:text="Description"
+                android:textColor="#000000"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/inter_semibold"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/courseDescription1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="Become a Pro Copywriter with the complete copywriting and Content Marketing Course. Use ChatGPT, Get 70+ Pro Templates."
+                android:textColor="#909497"
+                android:textSize="@dimen/_12sdp" />
+            <TextView
+                android:id="@+id/Reviews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="Reviews"
+                android:textColor="#000000"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/inter_semibold"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/reviewsRecyclerView"/>
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
+</androidx.core.widget.NestedScrollView>

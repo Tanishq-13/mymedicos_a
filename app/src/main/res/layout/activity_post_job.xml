@@ -1,93 +1,535 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".PostJobActivity">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:scrollbars="none"
+    android:background="@color/backgroundcolor">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.19">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_20sdp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="@dimen/_20sdp"
-            android:fontFamily="@font/montserrat_medium"
-            android:text="Fill the following details and post the Job..."
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/backbtn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/arrow_bk"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:padding="4dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"/>
 
-
-        <Spinner
-            android:id="@+id/speciality"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_40sdp"
-            android:layout_marginStart="@dimen/_20sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginEnd="@dimen/_20sdp"
-            android:layout_weight="1" />
-
-        <EditText
-            android:id="@+id/organization_name"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_40sdp"
-            android:layout_marginStart="@dimen/_20sdp"
-            android:layout_marginEnd="@dimen/_20sdp"
-            android:hint="Organization_name" />
-
-
-        <EditText
-            android:id="@+id/job_location"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_40sdp"
-            android:layout_marginStart="@dimen/_20sdp"
-            android:layout_marginEnd="@dimen/_20sdp"
-            android:hint="Job Location" />
-
-        <EditText
-            android:id="@+id/job_salary"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_40sdp"
-            android:layout_marginStart="@dimen/_20sdp"
-            android:layout_marginEnd="@dimen/_20sdp"
-            android:hint="Salary" />
-
-        <EditText
-            android:id="@+id/contact_details"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_40sdp"
-            android:layout_marginStart="@dimen/_20sdp"
-            android:layout_marginEnd="@dimen/_20sdp"
-            android:hint="Contact Details" />
-
-        <EditText
-            android:id="@+id/remark"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_80sdp"
-            android:layout_marginStart="@dimen/_20sdp"
-            android:layout_marginEnd="@dimen/_20sdp"
-            android:hint="Remarks" />
-
-        <Button
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_32sdp"
-            android:layout_marginEnd="@dimen/_32sdp"
-            android:text="Post Job" />
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingTop="26dp"
+            android:paddingRight="20dp">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
 
-    </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_extrabold"
+                    android:gravity="center"
+                    android:text="Post a Job Opening"
+                    android:textColor="@color/unselected"
+                    android:textSize="22sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:text="Please fill the following details!"
+                    android:textColor="@color/unselected"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="@drawable/cartbknew"
+                    android:padding="18dp">
+
+                    <EditText
+                        android:id="@+id/Job_organiser"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cartbknew"
+                        android:fontFamily="@font/inter"
+                        android:hint="Name"
+                        android:backgroundTint="@color/white"
+                        android:inputType="text"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/circularbordersolid"
+                    android:gravity="center"
+                    android:padding="18dp">
+
+                    <EditText
+                        android:id="@+id/Job_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:fontFamily="@font/inter"
+                        android:hint="Title of the Job"
+                        android:inputType="text"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/circularbordersolid"
+                    android:gravity="center"
+                    android:padding="18dp">
+
+                    <EditText
+                        android:id="@+id/Job_hopital"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:fontFamily="@font/inter"
+                        android:hint="Hospital Name"
+                        android:inputType="text"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/circularbordersolid"
+                    android:gravity="center"
+                    android:padding="18dp">
+
+                    <EditText
+                        android:id="@+id/opening"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:fontFamily="@font/inter"
+                        android:hint="Number of Openings"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/circularbordersolid"
+                    android:gravity="center"
+                    android:padding="18dp">
+
+                    <EditText
+                        android:id="@+id/Job_post"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:fontFamily="@font/inter"
+                        android:hint="Job Role"
+                        android:inputType="text"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/circularbordersolid"
+                    android:gravity="center"
+                    android:padding="18dp">
+
+                    <EditText
+                        android:id="@+id/Job_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="top"
+                        android:minHeight="@dimen/_90sdp"
+                        android:fontFamily="@font/inter"
+                        android:hint="Description"
+                        android:maxLength="2000"
+                        android:inputType="textMultiLine"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/char_counter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="0/2000"
+                    android:textColor="@android:color/darker_gray"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/location"
+                    android:layout_marginTop="20dp"
+                    android:drawablePadding="@dimen/_5ssp"
+                    android:text="Select Category"
+                    android:fontFamily="@font/inter"
+                    android:textColor="@color/unselected"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/job"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10ssp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/location"
+                    android:layout_marginTop="20dp"
+                    android:drawablePadding="@dimen/_5ssp"
+                    android:text="Select Speciality"
+                    android:fontFamily="@font/inter"
+                    android:textColor="@color/unselected"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/Job_Speciality"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10ssp" />
+
+                <Spinner
+                    android:id="@+id/Job_subspeciality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:padding="@dimen/_10ssp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/location"
+                    android:layout_marginTop="20dp"
+                    android:drawablePadding="@dimen/_5ssp"
+                    android:text="Select State from the List"
+                    android:fontFamily="@font/inter"
+                    android:textColor="@color/unselected"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:padding="@dimen/_10ssp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/duration"
+                    android:layout_marginTop="20dp"
+                    android:drawablePadding="@dimen/_5ssp"
+                    android:text="Estimated Job Duration"
+                    android:fontFamily="@font/inter"
+                    android:textColor="@color/unselected"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/circularbordersolid"
+                    android:gravity="center">
+
+                    <EditText
+                        android:id="@+id/job_duration"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:maxLength="2"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:fontFamily="@font/inter"
+                        android:hint="Estimate Role Duration"
+                        android:inputType="number"
+                        android:textSize="14sp" />
+
+                    <Spinner
+                        android:id="@+id/timelineduration"
+                        android:layout_width="wrap_content"
+                        android:paddingHorizontal="@dimen/_25sdp"
+                        android:background="@drawable/btnbg"
+                        android:layout_height="match_parent"
+                        android:paddingVertical="@dimen/_10sdp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/date"
+                    android:layout_marginTop="20dp"
+                    android:drawablePadding="@dimen/_5ssp"
+                    android:text="Select the Starting Date of the Role"
+                    android:fontFamily="@font/inter"
+                    android:textColor="@color/unselected"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginVertical="@dimen/_12sdp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/circularbordersolid"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvDate"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:paddingHorizontal="@dimen/_5ssp"
+                        android:textStyle="bold"
+                        android:paddingVertical="@dimen/_10ssp"
+                        android:gravity="center"
+                        android:textSize="@dimen/_12ssp"
+                        android:text="Job Opening Date"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:textColor="#BAB2B2"/>
+
+                    <TextView
+                        android:id="@+id/btnDatePicker"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:layout_height="match_parent"
+                        android:paddingHorizontal="@dimen/_10ssp"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/inter_semibold"
+                        android:paddingVertical="@dimen/_10ssp"
+                        android:gravity="center"
+                        android:textSize="@dimen/_12ssp"
+                        android:text="Select"
+                        android:background="@drawable/btnbg"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:textColor="@color/unselected"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/money"
+                    android:layout_marginTop="20dp"
+                    android:drawablePadding="@dimen/_5ssp"
+                    android:text="Set Salary Range (in Rupees)"
+                    android:fontFamily="@font/inter"
+                    android:textColor="@color/unselected"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.slider.RangeSlider
+                        android:id="@+id/salaryRangeSlider"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:valueFrom="1000"
+                        android:valueTo="100000"
+                        android:stepSize="1" />
+
+                    <Spinner
+                        android:id="@+id/salarytype"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/circularbordersolid"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+                    <EditText
+                        android:id="@+id/lower_range"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:padding="@dimen/_8ssp"
+                        android:gravity="center"
+                        android:maxLength="5"
+                        android:textColor="@color/unselected"
+                        android:fontFamily="@font/inter"
+                        android:hint="Lower Limit"
+                        android:inputType="number"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/upper_range"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:textColor="@color/unselected"
+                        android:maxLength="6"
+                        android:padding="@dimen/_8ssp"
+                        android:fontFamily="@font/inter"
+                        android:hint="Upper Limit"
+                        android:inputType="number"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/document"
+                    android:drawablePadding="@dimen/_5ssp"
+                    android:text="Attach a Document for reference"
+                    android:fontFamily="@font/inter"
+                    android:textColor="@color/unselected"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/circularbordersolid"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/addPdf"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:paddingHorizontal="@dimen/_5ssp"
+                        android:textStyle="bold"
+                        android:paddingVertical="@dimen/_10ssp"
+                        android:gravity="center"
+                        android:textSize="@dimen/_12ssp"
+                        android:text="Attach a Document (Opt.)"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:textColor="#BAB2B2"/>
+
+                    <TextView
+                        android:id="@+id/uploadpdfbtn"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:layout_height="match_parent"
+                        android:paddingHorizontal="@dimen/_10ssp"
+                        android:textStyle="bold"
+                        android:paddingVertical="@dimen/_10ssp"
+                        android:gravity="center"
+                        android:textSize="@dimen/_12ssp"
+                        android:text="Upload"
+                        android:fontFamily="@font/inter_semibold"
+                        android:background="@drawable/btnbg"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:textColor="@color/unselected"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/phonenumbertextll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:padding="10dp"
+                    android:fontFamily="@font/inter"
+                    android:text="Remember, you can only post a single Job Opening for a Week, Terms &amp; Conditions Applied."
+                    android:textAlignment="center"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/post1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="14dp"
+                    android:background="@drawable/categorydark"
+                    android:fontFamily="@font/inter"
+                    android:padding="16dp"
+                    android:text="Post Opening"
+                    android:textSize="@dimen/_14sdp"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/link_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:text="Need Help?"
+                    android:textColor="#3c4b5d"
+                    android:textSize="16dip" />
+
+                <TextView
+                    android:id="@+id/connectwithus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:text=" Connect Us"
+                    android:textColor="@color/blue"
+                    android:textSize="16dip" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

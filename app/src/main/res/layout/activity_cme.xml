@@ -2,9 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:background="@color/backgroundcolor"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CmeActivity">
+    tools:context=".activities.cme.CmeActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,57 +17,110 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.appbar.AppBarLayout
-            android:id="@+id/cemtoolbar_container"
+            android:id="@+id/cmetoolbar_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
+            android:background="@color/backgroundcolor"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/cmetoolbar"
-                app:title="CME"
+                android:paddingEnd="@dimen/_10ssp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                app:navigationIcon="@drawable/arrow_bk"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="@color/white">
+                android:background="@color/backgroundcolor"
+                app:menu="@menu/home_menu">
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="CME"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_18sdp"
+                            android:fontFamily="@font/roboto_bold"/>
+
+                    </LinearLayout>
+
+<!--                    <ImageView-->
+<!--                        android:id="@+id/cart_icon"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:gravity="center"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:src="@drawable/questionpart"-->
+<!--                        android:contentDescription="@null"/>-->
+
+                    </LinearLayout>
             </androidx.appcompat.widget.Toolbar>
         </com.google.android.material.appbar.AppBarLayout>
 
-        <LinearLayout
+        <HorizontalScrollView
             android:layout_width="match_parent"
-            android:layout_marginTop="@dimen/_5sdp"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:scrollbars="none"
+            android:layout_height="wrap_content">
 
-            <Spinner
-                android:id="@+id/mode"
-                android:background="@drawable/spinner_back"
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_marginStart="@dimen/_10sdp"
-                android:layout_marginEnd="@dimen/_10sdp"
-                android:layout_weight="1"
-                android:layout_height="@dimen/_40sdp"/>
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/_5sdp"
+                android:orientation="horizontal">
 
-            <Spinner
-                android:background="@drawable/spinner_back"
-                android:id="@+id/speciality"
-                android:layout_width="wrap_content"
-                android:layout_marginStart="@dimen/_10sdp"
-                android:layout_marginEnd="@dimen/_10sdp"
-                android:layout_weight="1"
-                android:layout_height="@dimen/_40sdp"/>
+                <Spinner
+                    android:id="@+id/mode"
+                    android:layout_width="match_parent"
+                    android:paddingHorizontal="@dimen/_20ssp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginHorizontal="@dimen/_2ssp"
+                    android:layout_weight="1"
+                    android:background="@drawable/spinner_back" />
 
-        </LinearLayout>
+                <Spinner
+                    android:background="@drawable/spinner_back"
+                    android:id="@+id/speciality"
+                    android:paddingHorizontal="@dimen/_20ssp"
+                    android:layout_width="match_parent"
+                    android:layout_marginHorizontal="@dimen/_2ssp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/_40sdp"/>
 
+                <Spinner
+                    android:background="@drawable/spinner_back"
+                    android:id="@+id/subspeciality"
+                    android:paddingHorizontal="@dimen/_20ssp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="@dimen/_5ssp"
+                    android:layout_height="@dimen/_40sdp"/>
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="52.00dp"
+                    android:id="@+id/ok"
+                    android:text="Search"
+                    android:clickable="true"/>
+
+            </LinearLayout>
+        </HorizontalScrollView>
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/view_pager"
@@ -76,132 +131,119 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
 
-
-
-        <ScrollView
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <LinearLayout
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
 
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Ongoing"
-                        android:fontFamily="@font/montserrat_medium"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:layout_marginStart="@dimen/_15sdp"/>
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginHorizontal="8dp"
+                        app:cardCornerRadius="@dimen/_5ssp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:paddingVertical="4dp"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="5dp">
+
+                            <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+                                android:id="@+id/cmecarousel"
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                app:showNavigationButtons="false"
+                                app:showCaption="false"
+                                app:autoPlay="true"/>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:layout_width="match_parent"
+                        android:layout_margin="@dimen/_10ssp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/tablayout"
+                        android:background="@color/backgroundcolor"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <com.google.android.material.tabs.TabItem
+                            android:id="@+id/ongoing"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ongoing" />
+
+                        <com.google.android.material.tabs.TabItem
+                            android:id="@+id/past"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Past" />
+
+                        <com.google.android.material.tabs.TabItem
+                            android:id="@+id/upcoming"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Upcoming" />
+                    </com.google.android.material.tabs.TabLayout>
+
+                    <RelativeLayout
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <!-- Include your ViewPager2 and any other UI elements here -->
+                        <androidx.viewpager2.widget.ViewPager2
+                            android:id="@+id/view_pager1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="See All"
-                        android:textColor="@color/blue"
-                        android:fontFamily="@font/montserrat_medium"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:layout_marginStart="@dimen/_185sdp"/>
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+
+                    <!--                <androidx.recyclerview.widget.RecyclerView-->
+                    <!--                    android:id="@+id/recyclerview3"-->
+                    <!--                    android:layout_width="match_parent"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:orientation="vertical">-->
+
+                    <!--                </androidx.recyclerview.widget.RecyclerView>-->
                 </LinearLayout>
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/cme_recyclerview1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:orientation="horizontal">
-
-
-                </androidx.recyclerview.widget.RecyclerView>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Top 10"
-                        android:fontFamily="@font/montserrat_medium"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:layout_marginStart="@dimen/_15sdp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="See All"
-                        android:textColor="@color/blue"
-                        android:fontFamily="@font/montserrat_medium"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:layout_marginStart="@dimen/_195sdp"/>
-                </LinearLayout>
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerview2"
-                    android:layout_width="match_parent"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-
-                </androidx.recyclerview.widget.RecyclerView>
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Upcoming"
-                        android:fontFamily="@font/montserrat_medium"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:layout_marginStart="@dimen/_15sdp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="See All"
-                        android:textColor="@color/blue"
-                        android:fontFamily="@font/montserrat_medium"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:layout_marginStart="@dimen/_195sdp"/>
-                </LinearLayout>
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:layout_width="match_parent"
-                    android:id="@+id/recyclerview3"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-
-                </androidx.recyclerview.widget.RecyclerView>
-            </LinearLayout>
-        </ScrollView>
+            </ScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
     </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/blue"
+        android:backgroundTint="@color/green"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
+        app:fabCustomSize="55dp"
         android:clickable="true"
-        android:src="@android:drawable/ic_input_add"
+        app:tint="@color/white"
+        app:maxImageSize="@dimen/_35ssp"
+        android:contentDescription="Add CME"
+        android:src="@drawable/add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.pg.activites.detailed.VideoBankDetailedActivity">
+
+    <ImageView
+        android:id="@+id/videobankthumbnailImage"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/placeholder" />
+
+    <TextView
+        android:id="@+id/videobankDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Loading details..."
+        app:layout_constraintEnd_toEndOf="@+id/videobankthumbnailImage"
+        app:layout_constraintStart_toStartOf="@+id/videobankthumbnailImage"
+        app:layout_constraintTop_toBottomOf="@+id/videobankthumbnailImage" />
+
+    <Button
+        android:id="@+id/VideovideoBankBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FF0000"
+        android:text="Learn"
+        android:textSize="@dimen/_12sdp"
+        android:fontFamily="@font/roboto_bold"
+        android:paddingVertical="@dimen/_8ssp"
+        android:layout_marginHorizontal="@dimen/_10ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

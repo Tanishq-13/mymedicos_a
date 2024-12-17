@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundcolor"
+    tools:context=".activities.slideshow.insider.SpecialitySlideshowInsiderActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/specialitytoolbar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/specialitytoolbar"
+            app:title="Topics"
+            app:navigationIcon="@drawable/arrow_bk"
+            app:titleTextColor="@color/black"
+            app:subtitleTextColor="@color/white"
+            app:subtitleTextAppearance="@color/white"
+            android:backgroundTint="@color/backgroundcolor"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Recyclerviewslideshowinsider"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_50sdp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

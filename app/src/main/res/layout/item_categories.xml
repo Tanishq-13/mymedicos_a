@@ -1,0 +1,62 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginVertical="10dp"
+    app:cardElevation="2dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:background="@drawable/cardviewbcg"
+
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/s"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/folder"
+        app:shapeAppearanceOverlay="@style/AppTheme" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/label"
+            android:text="Name"
+            android:textColor="@color/black"
+            android:fontFamily="@font/baloo_tamma_2_semibold"
+            android:textSize="@dimen/_12sdp"
+            android:paddingHorizontal="@dimen/_8ssp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/s"
+        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/s"
+            android:fontFamily="@font/montserrat_medium"
+            android:layout_marginBottom="@dimen/_10ssp"
+            android:paddingHorizontal="@dimen/_8ssp"
+            android:text="Notes . Chapter wise QBanks . Subject Wise Grand Test"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/unselected"
+            android:textSize="@dimen/_10sdp" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+</androidx.cardview.widget.CardView>

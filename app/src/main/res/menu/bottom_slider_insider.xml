@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Presentations"
+        android:icon="@drawable/bookicon"
+        android:id="@+id/qb">
+    </item>
+
+    <item
+        android:title="Documents"
+        android:icon="@drawable/lectures"
+        android:id="@+id/lc">
+    </item>
+</menu>

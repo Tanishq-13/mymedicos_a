@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/backgroundcolor"
+    android:layout_height="match_parent"
+    tools:context=".activities.profile.Personalinfo">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/verificationtoolbar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/verificationtoolbar"
+            app:title="Verification"
+            app:navigationIcon="@drawable/arrow_bk"
+            app:titleTextColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/backgroundcolor">
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_15ssp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/verificationtoolbar_container">
+
+        <TextView
+            android:id="@+id/verification_timer_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/location"
+            android:drawablePadding="@dimen/_5ssp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:text="00:00"
+            android:fontFamily="@font/inter"
+            android:textColor="@color/unselected"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="To enhance the trust and credibility of our medical community, please enter your Medical Council Number below and click 'Get Verified.' This unique identifier is essential for confirming your professional status. Upon successful verification, your profile will be marked with a distinctive symbol."
+            android:textAlignment="textStart"
+            android:textColor="#514E4E"
+            android:fontFamily="@font/inter"
+            android:textSize="@dimen/_10ssp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/location"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="@dimen/_5ssp"
+            android:text="Select State Medical Council"
+            android:fontFamily="@font/inter"
+            android:textColor="@color/unselected"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/mcncouncilselected"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/back6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10ssp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Enter your Medical Council Number"
+            android:fontFamily="@font/inter"
+            android:textColor="@color/unselected"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/mcnumber"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:inputType="number"
+            android:maxLength="16"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/inter"
+            android:background="@drawable/back6"
+            android:hint="Enter Medical Council Number"
+            android:paddingStart="@dimen/_10sdp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/applylinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:elevation="8dp"
+        android:orientation="horizontal"
+        android:padding="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/verificationButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_5ssp"
+            android:fontFamily="@font/inter"
+            android:paddingVertical="@dimen/_12sdp"
+            android:backgroundTint="@color/unselected"
+            android:text="Get Verified"
+            android:textStyle="normal"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/verificationPendingButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5ssp"
+            android:backgroundTint="@color/unselected"
+            android:text="@string/verification_pending"
+            android:textStyle="normal"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

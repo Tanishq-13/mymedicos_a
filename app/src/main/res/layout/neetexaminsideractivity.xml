@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:paddingEnd="@dimen/_10ssp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:menu="@menu/home_menu">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/setnamewillbehere"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Set A"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/_18sdp"
+                        android:fontFamily="@font/roboto_bold"/>
+
+                    <LinearLayout
+                        android:id="@+id/totheback1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/_10ssp"
+                        android:paddingVertical="@dimen/_5ssp"
+                        android:background="@drawable/endbutton">
+
+                        <ImageView
+                            android:id="@+id/cart_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginStart="@dimen/_5ssp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/endbtn"
+                            android:contentDescription="@null"/>
+
+                        <TextView
+                            android:id="@+id/cart_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="End"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textSize="14sp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:dividerColor="@color/unselected"
+            app:dividerThickness="@dimen/_1ssp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/timerTextView"
+                android:background="@drawable/backofpgmaterials"
+                android:layout_width="wrap_content"
+                android:paddingHorizontal="@dimen/_10ssp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_10ssp"
+                android:layout_gravity="start"
+                android:fontFamily="@font/inter_semibold"
+                android:gravity="start"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="3 hrs 30 mins"
+                android:textAllCaps="true"
+                android:textColor="@color/unselected"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"/>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:dividerColor="@color/backgroundcolor"/>
+
+            <ImageView
+                android:id="@+id/Navigate"
+                android:layout_width="wrap_content"
+                android:src="@drawable/menu_icon_come_here"
+                android:textColor="@color/backgroundcolor"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_14sdp"
+                android:text="Navigate"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/markForReviewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_5ssp"
+            android:gravity="center_vertical">
+
+            <CheckBox
+                android:id="@+id/markForReviewCheckBox1"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/_12ssp"
+                android:textColorHint="@color/unselected"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Mark for Review"
+                android:textColor="@color/unselected" />
+            <TextView
+                android:id="@+id/currentquestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_8sdp"
+                android:elevation="@dimen/_5sdp"
+                android:layout_gravity="end"
+                android:fontFamily="@font/inter_semibold"
+                android:gravity="end"
+                android:paddingHorizontal="@dimen/_16sdp"
+                android:text="18"
+                android:textAllCaps="true"
+                android:textColor="@color/unselected"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:paddingBottom="80dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:layout_marginHorizontal="@dimen/_8sdp"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="0dp"
+                        app:dividerColor="@color/backgroundcolor"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/BackButtom"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingRight="@dimen/_50sdp"
+                            android:background="@drawable/previousbtn"
+                            android:gravity="center"
+                            android:paddingHorizontal="@dimen/_2sdp"
+                            android:paddingVertical="@dimen/_8sdp"
+                            android:text="Previous"
+                            android:textColor="#666666"
+                            android:textSize="@dimen/_16sdp" />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="0dp"
+                            android:layout_weight="0.1"
+                            app:dividerColor="@color/backgroundcolor"
+                            android:layout_height="wrap_content"/>
+
+
+                        <TextView
+                            android:id="@+id/nextButton1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/nextbutton"
+                            android:gravity="center"
+                            android:paddingHorizontal="@dimen/_5sdp"
+                            android:paddingVertical="@dimen/_8sdp"
+                            android:text="Next"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_16sdp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

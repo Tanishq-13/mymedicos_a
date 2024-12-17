@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/text_insufficient_credits"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_semibold"
+        android:text="You have Insufficient Credit Points"
+        android:gravity="center"
+        android:textSize="@dimen/_16ssp"
+        android:paddingVertical="@dimen/_5ssp"
+        android:paddingHorizontal="@dimen/_5ssp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:paddingHorizontal="@dimen/_10ssp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/_10ssp"
+        android:fontFamily="@font/inter"
+        android:textColor="#7C7C7C"
+        android:text="Recharge your med-wallet today, to unlock all the learning opportunities for you."
+        android:gravity="center"
+        android:textSize="@dimen/_12ssp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_5ssp"
+            android:fontFamily="@font/inter_semibold"
+            android:textColor="#5C5C5C"
+            android:text="Get our Recommended Plan"
+            android:gravity="start"
+            android:textSize="@dimen/_12ssp"/>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            app:dividerColor="@color/grey"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_5ssp"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+
+    <!-- Plans -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/puchase100credits"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="10dp"
+        android:background="@color/unselected"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F7D058"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/_8ssp"
+                    android:text="Recommended"
+                    android:layout_alignParentEnd="true"
+                    android:textSize="@dimen/_10ssp"
+                    android:layout_alignParentTop="true"
+                    android:fontFamily="@font/inter"
+                    android:textAlignment="center"
+                    android:background="@drawable/backgroundfortherecommended"/>
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:scaleType="centerCrop"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/verifiedanime"
+                    app:lottie_speed="1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:paddingHorizontal="@dimen/_10ssp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/brpurchase"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity="bottom"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_semibold"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="8dp"
+                        android:text="Get 129 Base Credit Points + 71 Bonus"
+                        android:textColor="@color/unselected"
+                        android:textSize="@dimen/_10ssp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Exit and Explore -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_10ssp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/intenttocredit"
+            android:layout_width="0dp"
+            android:paddingVertical="@dimen/_10ssp"
+            android:fontFamily="@font/inter_semibold"
+            android:drawableEnd="@drawable/arrowright"
+            android:paddingHorizontal="@dimen/_10ssp"
+            android:gravity="center"
+            android:textSize="@dimen/_10ssp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Explore Other"
+            android:layout_gravity="center"
+            android:textColor="@color/unselected"/>
+
+        <TextView
+            android:id="@+id/close"
+            android:layout_width="0dp"
+            android:paddingVertical="@dimen/_10ssp"
+            android:fontFamily="@font/inter_semibold"
+            android:paddingHorizontal="@dimen/_10ssp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Close"
+            android:background="@drawable/backgroundoftheunselected"
+            android:layout_marginStart="@dimen/_10ssp"
+            android:layout_gravity="center"
+            android:textColor="@color/unselected"/>
+
+    </LinearLayout>
+
+</LinearLayout>

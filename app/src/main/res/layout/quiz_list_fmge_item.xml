@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/payfortheexam"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:elevation="@dimen/_50ssp"
+    android:layout_marginBottom="@dimen/_8ssp"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/slot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/unselected"
+            android:textStyle="normal"
+            android:fontFamily="@font/inter_semibold"
+            android:textSize="@dimen/_12ssp"
+            android:layout_marginHorizontal="@dimen/_4ssp"
+            android:text="A"
+            android:background="@drawable/back6"
+            android:paddingVertical="@dimen/_5ssp"
+            android:paddingHorizontal="@dimen/_10ssp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/_5ssp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/linevertical"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:background="@drawable/backgroundoftheunselected"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:paddingVertical="@dimen/_5ssp"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="@dimen/_10ssp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/titleSets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Enter Position here"
+                android:textColor="@color/unselected"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="normal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_1sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:paddingHorizontal="@dimen/_2sdp"
+                    android:text="Due Date :"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/availablefromtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:paddingHorizontal="@dimen/_5sdp"
+                    android:text="25 Dec 2023"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/availabletilltime"
+                    android:layout_width="wrap_content"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:paddingHorizontal="@dimen/_5sdp"
+                    android:text="25 Dec 2023"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:dividerColor="#A7A7A7"
+            android:paddingVertical="@dimen/_10ssp"
+            app:dividerThickness="@dimen/_1ssp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Attempt Now"
+            android:textStyle="normal"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/red"
+            android:fontFamily="@font/inter_semibold"
+            android:layout_gravity="end"
+            android:gravity="end"
+            android:paddingHorizontal="@dimen/_10ssp"
+            android:paddingVertical="@dimen/_5ssp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

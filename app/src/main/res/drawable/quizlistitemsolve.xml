@@ -1,0 +1,11 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Dark gray solid color with slight transparency -->
+    <solid android:color="#4C4C4C" /> <!-- You can adjust this color to match the exact shade -->
+
+    <!-- Rounded corners for the button -->
+    <corners android:radius="6dp" /> <!-- Adjusted to be more rounded -->
+
+    <!-- Border around the button (optional) -->
+</shape>

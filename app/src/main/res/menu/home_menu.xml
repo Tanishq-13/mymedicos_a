@@ -4,11 +4,10 @@
 
     <item
         android:id="@+id/chat"
-        android:title="Messege"
-        android:icon="@drawable/baseline_message_24"
-        app:showAsAction="always"/>
-
-
-
+        android:title="History"
+        android:visible="false"
+        android:icon="@drawable/baseline_work_outline_24"
+        app:showAsAction="always">
+    </item>
 
 </menu>

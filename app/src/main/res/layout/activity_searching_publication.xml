@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundcolor"
+    android:layout_height="match_parent"
+    tools:context=".activities.publications.activity.SearchingPublicationActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:paddingEnd="@dimen/_10ssp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/backgroundcolor">
+
+        <ImageView
+            android:id="@+id/backtothepublicationactivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_bk"
+            android:padding="@dimen/_5sdp"/>
+
+        <TextView
+            android:id="@+id/titleofthesearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:paddingStart="@dimen/_10sdp"
+            android:fontFamily="@font/inter"
+            android:layout_gravity="center"
+            android:textSize="@dimen/_18ssp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/productList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/noResults"
+        android:layout_width="match_parent"
+        android:padding="@dimen/_10sdp"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/correctanswer"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:lottie_autoPlay="true"
+            android:layout_gravity="center"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/notfound"
+            app:lottie_speed="1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Result Found, Try Checking your Spelling"
+            android:visibility="visible"
+            android:fontFamily="@font/inter"
+            android:layout_gravity="center"
+            android:textSize="@dimen/_13ssp"
+            android:textColor="@color/unselected"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Use More general terms, Check each Category for other buying options."
+            android:visibility="visible"
+            android:fontFamily="@font/inter"
+            android:textColor="@color/grey"
+            android:layout_gravity="center"
+            android:textSize="@dimen/_10ssp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/helpsupportno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Need Help Support ?"
+            android:visibility="visible"
+            android:fontFamily="@font/inter_extrabold"
+            android:textColor="@color/grey"
+            android:layout_gravity="center"
+            android:layout_marginVertical="@dimen/_20sdp"
+            android:padding="@dimen/_5sdp"
+            android:gravity="center"
+            android:textSize="@dimen/_12ssp"
+            android:background="@drawable/categoryblackkkkkk"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

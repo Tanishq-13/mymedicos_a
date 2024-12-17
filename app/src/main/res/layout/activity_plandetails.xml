@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:background="#F8F7F1"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.pg.activites.internalfragments.plandetails">
+
+    <!-- Use androidx.appcompat.widget.Toolbar for proper integration -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F8F7F1"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Back Button -->
+        <ImageView
+            android:id="@+id/backtothehomefrompg"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:src="@drawable/arrow_bk"
+            android:layout_gravity="start"
+            android:contentDescription="Back"/>
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/headname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Foundation Plan"
+            android:textColor="#6F6E6E"
+            android:fontFamily="@font/inter_semibold"
+            android:textSize="@dimen/_14sdp"
+            android:layout_gravity="center_horizontal"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- RecyclerView for displaying plans -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/plan_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/bottom_price_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:padding="16dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:orientation="vertical">
+        <!-- Price Text -->
+    <TextView
+        android:id="@+id/frf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price Summary"
+        android:fontFamily="@font/inter_semibold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sdp"
+        android:layout_gravity="center_vertical"/>
+        <TextView
+            android:id="@+id/selected_plan_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₹0.00"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/inter_semibold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sdp"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+        <!-- Proceed to Pay Button -->
+        <Button
+            android:id="@+id/proceed_to_pay_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Proceed to Pay"
+            android:textColor="@android:color/white"
+            android:background="?attr/colorAccent"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

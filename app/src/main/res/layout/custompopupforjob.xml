@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/popupalertbeforeapply"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_10ssp"
+    android:gravity="center"
+    app:cardCornerRadius="@dimen/_10sdp"
+    android:layout_gravity="center_vertical"
+    android:layout_width="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_bk_for_message"
+        android:padding="5dp"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/unselected"
+            android:layout_gravity="center"
+            android:layout_marginVertical="10dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:fontFamily="@font/inter_semibold"
+            android:text="Terms &amp; Conditions" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5ssp"
+            android:fontFamily="@font/inter"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:text="1. mymedicos App provides a platform for HR to post jobs and medical professionals to search for employment opportunities." />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5ssp"
+            android:fontFamily="@font/inter"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:text="2. We do not facilitate or engage in any monetary transactions related to job postings or applications." />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5ssp"
+            android:fontFamily="@font/inter"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:text="3. Users are advised to exercise caution and contact potential employers securely to prevent fraud or scams." />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5ssp"
+            android:fontFamily="@font/inter"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:text="4. mymedicos App bears no responsibility for any financial transactions conducted through the platform." />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5ssp"
+            android:fontFamily="@font/inter"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:text="5. By using our services, users agree to abide by these terms and conditions and acknowledge that mymedicos App is not liable for any fraudulent activity" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_5sdp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/agree"
+                android:layout_width="0dp"
+                android:paddingVertical="@dimen/_10ssp"
+                android:fontFamily="@font/inter_semibold"
+                android:paddingHorizontal="@dimen/_10ssp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Accept"
+                android:background="@color/unselected"
+                android:layout_gravity="center"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/disagree"
+                android:layout_width="0dp"
+                android:paddingVertical="@dimen/_10ssp"
+                android:fontFamily="@font/inter_semibold"
+                android:paddingHorizontal="@dimen/_10ssp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Decline"
+                android:background="#B8B8B8"
+                android:layout_marginStart="@dimen/_10ssp"
+                android:layout_gravity="center"
+                android:textColor="@color/unselected"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

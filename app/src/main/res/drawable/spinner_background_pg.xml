@@ -1,0 +1,8 @@
+<!-- res/drawable/spinner_background_pg.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#F6F6F6"/> <!-- Change to your desired background color -->
+    <corners android:radius="8dp"/> <!-- Adjust corner radius as needed -->
+    <stroke
+        android:width="1dp"
+        android:color="#000000"/> <!-- Change to your desired border color -->
+</shape>

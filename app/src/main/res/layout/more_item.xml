@@ -1,0 +1,19 @@
+<!-- res/layout/more_item.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/categorywhite"
+    android:layout_margin="@dimen/_2sdp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/moretext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="More"
+        android:padding="16dp"
+        android:textSize="16sp"
+        android:fontFamily="@font/inter_extrabold"
+        android:textColor="@color/unselected" />
+
+</LinearLayout>

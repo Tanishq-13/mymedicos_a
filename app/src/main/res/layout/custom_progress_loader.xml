@@ -1,0 +1,49 @@
+<!-- res/layout/custom_progress_loader.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="100dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_20sdp"
+        android:elevation="@dimen/_100sdp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="@dimen/_100sdp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/categoryblackkkkkk"
+            android:padding="8dp"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:indeterminate="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/unselected"
+                android:textSize="@dimen/_13sdp"
+                android:fontFamily="@font/inter"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:textStyle="bold"
+                android:layout_height="match_parent"
+                android:text="Welcome, Logging in"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

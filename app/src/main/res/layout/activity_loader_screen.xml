@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:foreground="@drawable/bkfortheloader"
+    android:background="@color/white">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/correctanswer"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_150sdp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/first_new"
+        app:lottie_speed="1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10ssp"
+        android:paddingHorizontal="@dimen/_20ssp"
+        android:text="Hang on! Designing your blueprint for achievement."
+        android:textColor="@color/unselected"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/inter_semibold"
+        android:gravity="center" />
+
+</LinearLayout>

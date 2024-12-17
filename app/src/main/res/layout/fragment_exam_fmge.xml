@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/backgroundcolor"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".activities.fmge.activites.fragments.ExamFmgeFragment">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/backgroundcolor"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/backgroundcolor"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/shimmercomeup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:lottie_autoPlay="true"
+                    android:visibility="gone"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/shimmer"
+                    app:lottie_speed="1" />
+
+                <LinearLayout
+                    android:id="@+id/dotsLayoutpg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:background="@color/backgroundcolor"
+                    android:layout_height="wrap_content"
+                    android:text="Examination"
+                    android:fontFamily="@font/inter"
+                    android:textColor="@color/unselected"
+                    android:layout_gravity="center_vertical"
+                    android:paddingVertical="@dimen/_2ssp"
+                    android:textSize="@dimen/_16ssp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:background="@color/backgroundcolor"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/_5ssp"
+                    android:text="This is a Examination based Quiz on the FMGE 2023 pattern most predictable questions."
+                    android:fontFamily="@font/inter"
+                    android:textColor="@color/grey"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="normal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginVertical="@dimen/_5ssp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/borderforfmgeqb"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:paddingHorizontal="@dimen/_8ssp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:background="@color/backgroundcolor"
+                        android:layout_height="wrap_content"
+                        android:text="Instruction"
+                        android:fontFamily="@font/inter"
+                        android:textColor="@color/grey"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="@dimen/_14ssp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:background="@color/backgroundcolor"
+                        android:layout_height="wrap_content"
+                        android:text="Due Date : Updated on 8th May, 2024"
+                        android:fontFamily="@font/inter"
+                        android:textColor="@color/grey"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <com.google.android.material.tabs.TabLayout
+                    android:layout_width="match_parent"
+                    android:background="@color/backgroundcolor"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tablayout">
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/slotha"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SLOTH A"/>
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/slothb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SLOTH B"/>
+
+                </com.google.android.material.tabs.TabLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/view_pager_fmge"
+                        android:paddingHorizontal="@dimen/_5ssp"
+                        android:paddingVertical="@dimen/_10sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </RelativeLayout>
+
+<!--                <androidx.recyclerview.widget.RecyclerView-->
+<!--                    android:id="@+id/specialexam"-->
+<!--                    android:layout_marginTop="@dimen/_5ssp"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:elevation="@dimen/_2sdp"-->
+<!--                    android:layout_height="wrap_content"/>-->
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    
+</androidx.constraintlayout.widget.ConstraintLayout>

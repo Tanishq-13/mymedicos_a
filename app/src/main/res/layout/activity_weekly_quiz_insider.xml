@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="@dimen/_40sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/pauselyout"
+
+                        android:layout_width="@dimen/_22sdp"
+                        android:layout_height="@dimen/_22sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginLeft="@dimen/_8ssp"
+                        android:src="@drawable/pause_circle_svgrepo_com" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/setnamewillbehere"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_semibold"
+                        android:text="Set A"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:textSize="@dimen/_16sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_marginRight="@dimen/_16sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/Navigate"
+
+                        android:layout_width="@dimen/_18sdp"
+                        android:layout_height="@dimen/_18sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:src="@drawable/menu_symbol_of_three_parallel_lines_svgrepo_com"/>
+                    </LinearLayout>
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/totheback"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@drawable/endbutton"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        android:paddingHorizontal="@dimen/_10ssp"-->
+<!--                        android:paddingVertical="@dimen/_5ssp"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/cart_icon"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_marginStart="@dimen/_5ssp"-->
+<!--                            android:contentDescription="@null"-->
+<!--                            android:gravity="center"-->
+<!--                            android:src="@drawable/endbtn" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/cart_title"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="Leave"-->
+<!--                            android:textColor="@color/white"-->
+<!--                            android:textSize="14sp"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                    </LinearLayout>-->
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/markForReviewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_5ssp"
+            android:gravity="center_vertical">
+
+            <CheckBox
+                android:id="@+id/markForReviewCheckBox"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/_12ssp"
+                android:textColorHint="@color/unselected"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Mark for Review"
+                android:textColor="#515151" />
+            <TextView
+                android:id="@+id/currentquestion1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_8sdp"
+                android:elevation="@dimen/_5sdp"
+                android:layout_gravity="end"
+                android:fontFamily="@font/inter_semibold"
+                android:gravity="end"
+                android:paddingHorizontal="@dimen/_16sdp"
+                android:text="18"
+                android:textAllCaps="true"
+                android:textColor="@color/unselected"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            app:layout_constraintTop_toBottomOf="@id/markForReviewLayout"
+            app:layout_constraintBottom_toTopOf="@id/button_container"/>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="0dp"
+                app:dividerColor="@color/backgroundcolor"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+    <LinearLayout
+        android:id="@+id/button_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:padding="@dimen/_8sdp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Previous button -->
+        <TextView
+            android:id="@+id/BackButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingRight="@dimen/_50sdp"
+            android:background="@drawable/background_edu"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_5sdp"
+            android:paddingVertical="@dimen/_8sdp"
+            android:text="Previous"
+            android:textColor="#666666"
+            android:textSize="@dimen/_12sdp" />
+
+        <!-- Divider between buttons -->
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="0dp"
+            android:layout_weight="0.1"
+            app:dividerColor="@color/backgroundcolor"
+            android:layout_height="wrap_content"/>
+
+        <!-- Next button -->
+        <TextView
+            android:id="@+id/nextButton2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/nextbutton"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_5sdp"
+            android:paddingVertical="@dimen/_8sdp"
+            android:text="Next"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp" />
+    </LinearLayout>
+
+<!--    <TextView-->
+<!--        android:id="@+id/endenabled"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@drawable/backofpgmaterials"-->
+<!--        android:layout_margin="@dimen/_5ssp"-->
+<!--        android:elevation="10dp"-->
+<!--        android:fontFamily="@font/inter"-->
+<!--        android:paddingVertical="10dp"-->
+<!--        android:text="End"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textColor="@color/unselected"-->
+<!--        android:textSize="18dp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

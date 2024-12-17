@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Custom style for the SearchView -->
+    <style name="CustomSearchView" parent="Widget.AppCompat.SearchView">
+        <!-- Remove the default underline -->
+        <item name="closeIcon">@null</item>
+        <item name="android:textSize">12sp</item>
+        <item name="searchIcon">@drawable/search_svgrepo_com</item>
+        <item name="queryBackground">@android:color/transparent</item>
+        <item name="searchHintIcon">@drawable/search_svgrepo_com</item>
+        <item name="background">@drawable/search_view_background</item>
+    </style>
+
+</resources>

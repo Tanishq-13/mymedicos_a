@@ -3,115 +3,479 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/backgroundcolor"
     android:layout_height="match_parent"
-    tools:context=".PostCmeActivity">
-
+    tools:context=".activities.cme.PostCmeActivity">
 
     <ScrollView
         android:layout_width="match_parent"
-
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.134">
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/backbtn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/arrow_bk"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:padding="4dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:paddingVertical="@dimen/_20sdp"
+            android:paddingHorizontal="@dimen/_10sdp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_marginBottom="@dimen/_20sdp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_20sdp"
-                android:layout_marginTop="16dp"
-                android:fontFamily="@font/montserrat_medium"
-                android:text="Fill the following details and post your CME..."
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_extrabold"
+                    android:gravity="center"
+                    android:text="Post a Cme"
+                    android:textColor="@color/unselected"
+                    android:textSize="22sp" />
 
-            <EditText
-                android:id="@+id/cme_title"
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:text="Please fill the following details carefully"
+                    android:textColor="@color/unselected"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_40sdp"
-                android:layout_marginStart="@dimen/_20sdp"
-                android:layout_marginEnd="@dimen/_20sdp"
-                android:hint="Title of the CME" />
+                android:layout_height="wrap_content"
+                android:background="@drawable/circularbordersolid"
+                android:gravity="center"
+                android:padding="18dp">
 
-            <EditText
-                android:id="@+id/cme_organiser"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_40sdp"
-                android:layout_marginStart="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginEnd="@dimen/_20sdp"
-                android:hint="Organiser" />
+                <EditText
+                    android:id="@+id/cme_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:fontFamily="@font/inter"
+                    android:hint="Give a Title"
+                    android:inputType="text"
+                    android:textSize="14sp" />
 
-            <EditText
-                android:id="@+id/cme_presenter"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_40sdp"
-                android:layout_marginStart="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginEnd="@dimen/_20sdp"
-                android:hint="Presenter" />
+            </LinearLayout>
 
-            <EditText
-                android:id="@+id/cme_venu"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_40sdp"
-                android:layout_marginStart="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginEnd="@dimen/_20sdp"
-                android:hint="Venue" />
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/cartbknew"
+                android:padding="18dp">
+
+                <EditText
+                    android:id="@+id/cme_organiser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cartbknew"
+                    android:fontFamily="@font/inter"
+                    android:hint="Organiser Name"
+                    android:backgroundTint="@color/white"
+                    android:inputType="text"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/circularbordersolid"
+                android:gravity="center"
+                android:padding="18dp">
+
+                <EditText
+                    android:id="@+id/cme_presenter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:fontFamily="@font/inter"
+                    android:hint="Give Presenters Name"
+                    android:inputType="text"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/circularbordersolid"
+                android:gravity="center"
+                android:padding="18dp">
+
+                <EditText
+                    android:id="@+id/cme_venu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:minHeight="@dimen/_90sdp"
+                    android:fontFamily="@font/inter"
+                    android:hint="Description"
+                    android:maxLength="2000"
+                    android:inputType="textMultiLine"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/char_counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="0/2000"
+                android:textColor="@android:color/darker_gray"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="@dimen/_5ssp"
+                android:text="Select Mode of Cme"
+                android:fontFamily="@font/inter"
+                android:textColor="@color/unselected"
+                android:textStyle="bold" />
 
             <Spinner
                 android:id="@+id/cmemode"
+                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_40sdp"
-                android:layout_marginStart="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginEnd="@dimen/_20sdp"
-                android:layout_weight="1" />
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10ssp" />
 
-
-            <EditText
-                android:id="@+id/cme_virtuallink"
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_40sdp"
-                android:layout_marginStart="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginEnd="@dimen/_20sdp"
-                android:hint="Virtual Meeting Link(if online)" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="@dimen/_5ssp"
+                android:text="Select the Speciality"
+                android:fontFamily="@font/inter"
+                android:textColor="@color/unselected"
+                android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/cme_place"
+            <Spinner
+                android:id="@+id/cmespeciality"
+                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_40sdp"
-                android:layout_marginStart="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginEnd="@dimen/_20sdp"
-                android:hint="Place(if offline)" />
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10ssp" />
 
+            <Spinner
+                android:id="@+id/cmesubspeciality"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10ssp" />
+
+            <TextView
+                android:id="@+id/room"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="@dimen/_5ssp"
+                android:text="@string/create_a_random_room_code_to_organize_your_cme"
+                android:fontFamily="@font/inter"
+                android:textColor="@color/unselected"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cmevirtuallinkholder"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/onlyforzoom"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/zoomicon"/>
+
+                <EditText
+                    android:id="@+id/cme_virtuallink"
+                    android:layout_width="match_parent"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:fontFamily="@font/inter"
+                    android:hint="Enter the Zoom Link"
+                    android:inputType="text"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/offlineroom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="@dimen/_5ssp"
+                android:text="Enter the location where the event will going to be organised"
+                android:fontFamily="@font/inter"
+                android:textColor="@color/unselected"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cmeholderplace"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:background="@drawable/onlyformaps"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/openmaps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/googlemaps"/>
+
+                <EditText
+                    android:id="@+id/cme_place"
+                    android:layout_width="match_parent"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:fontFamily="@font/inter"
+                    android:hint="Enter the Google Maps Link"
+                    android:inputType="text"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="@dimen/_5ssp"
+                android:text="Select the Date of the Cme"
+                android:fontFamily="@font/inter"
+                android:textColor="@color/unselected"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginVertical="@dimen/_12sdp"
+                android:layout_height="match_parent"
+                android:background="@drawable/circularbordersolid"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:hint="Select Estimate Date"
+                    android:layout_height="match_parent"
+                    android:paddingHorizontal="@dimen/_5ssp"
+                    android:textStyle="bold"
+                    android:paddingVertical="@dimen/_10ssp"
+                    android:gravity="center"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textColor="#BAB2B2"/>
+
+                <TextView
+                    android:id="@+id/btnDatePicker"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="match_parent"
+                    android:paddingHorizontal="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    android:paddingVertical="@dimen/_10ssp"
+                    android:gravity="center"
+                    android:textSize="@dimen/_12ssp"
+                    android:text="Select"
+                    android:background="@drawable/categorydark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textColor="#FFFFFF"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:drawablePadding="@dimen/_5ssp"
+                android:text="Select the Time of the Cme"
+                android:fontFamily="@font/inter"
+                android:textColor="@color/unselected"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_height="match_parent"
+                android:background="@drawable/circularbordersolid"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:paddingHorizontal="@dimen/_5ssp"
+                    android:textStyle="bold"
+                    android:paddingVertical="@dimen/_10ssp"
+                    android:hint="Select Estimate Time"
+                    android:gravity="center"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textColor="#BAB2B2"/>
+
+                <TextView
+                    android:id="@+id/btnTimePicker"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="match_parent"
+                    android:paddingHorizontal="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    android:paddingVertical="@dimen/_10ssp"
+                    android:gravity="center"
+                    android:textSize="@dimen/_12ssp"
+                    android:text="Select"
+                    android:background="@drawable/categorydark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textColor="#FFFFFF"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="10dp"
+                android:fontFamily="@font/inter"
+                android:text="Attach a Document with the CME as a Reference for your audience (Remember to Click on Upload after attaching the Document before making it public."
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_height="match_parent"
+                android:background="@drawable/circularbordersolid"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/addPdf"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:paddingHorizontal="@dimen/_5ssp"
+                    android:textStyle="bold"
+                    android:paddingVertical="@dimen/_10ssp"
+                    android:gravity="center"
+                    android:textSize="@dimen/_12ssp"
+                    android:text="Attach a Document (Opt.)"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textColor="#BAB2B2"/>
+
+                <TextView
+                    android:id="@+id/uploadpdfbtn"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="match_parent"
+                    android:paddingHorizontal="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    android:paddingVertical="@dimen/_10ssp"
+                    android:gravity="center"
+                    android:textSize="@dimen/_12ssp"
+                    android:text="Upload"
+                    android:background="@drawable/categorydark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textColor="#FFFFFF"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/phonenumbertextll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="10dp"
+                android:fontFamily="@font/inter"
+                android:text="Remember, after posting a CME you'll be the person who'll responsible for starting the event from the mymedicos Application."
+                android:textAlignment="center"
+                android:textSize="12sp" />
 
             <Button
                 android:id="@+id/post_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Post"
-                android:fontFamily="@font/montserrat_medium"
-                android:layout_marginStart="@dimen/_32sdp"
-                android:layout_marginEnd="@dimen/_32sdp"
-                android:layout_marginTop="@dimen/_30sdp"/>
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/categorydark"
+                android:fontFamily="@font/inter"
+                android:padding="16dp"
+                android:text="Make it Live"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:id="@+id/link_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:text="Facing any Issue ? "
+                    android:textColor="#3c4b5d"
+                    android:textSize="16dip" />
+
+                <TextView
+                    android:id="@+id/connectwithus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:text=" Connect Us"
+                    android:textColor="@color/blue"
+                    android:textSize="16dip" />
+
+            </LinearLayout>
+
         </LinearLayout>
+
+        </RelativeLayout>
+
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

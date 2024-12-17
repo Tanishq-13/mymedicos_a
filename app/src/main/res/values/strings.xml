@@ -2,128 +2,436 @@
     <string name="app_name">my_medicos</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hintSearchMess">Search Specialities</string>
+    <string name="OpenDrawer">Open Navigation Drawer</string>
+    <string name="CloseDrawer">close Navigation Drawer</string>
 
+    <style name="ToolbarTitle">
+        <item name="android:layout_gravity">center</item>
+    </style>
 
+    <style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/custom_corner_for_alert</item>
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+    </style>
+
+    <style name="PositiveButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">#FF0000</item>
+    </style>
+
+    <style name="NegativeButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <string name="select_speciality">Select Speciality</string>
+    <string name="select_mode">Select mode</string>
+
+    <!-- Specialities -->
     <string-array name="speciality">
-        <item>-Select your speciality-</item>
-        <item>
-Anesthesia and Critical Care</item>
-        <item>Allergic Medicine</item>
-        <item>
-Bariatrics Surgery</item>
-        <item>CTVS Surgery</item>
-        <item>
-Cardiology</item>
-        <item>Cosmetic Surgery</item>
-        <item>Critical Care Medicine</item>
-        <item>Dermatology</item>
-        <item>Diabetology</item>
-        <item>Dental</item>
-        <item>Emergency Medicine </item>
-        <item>ENT</item>
-        <item>Endocrinology</item>
-        <item>Family Medicine</item>
-        <item>
-Fetal Medicine</item>
-        <item>Geriatrics</item>
-        <item>General Medicine</item>
-        <item>General Surgery</item>
-        <item>GI Surgery</item>
-        <item>Gynec Oncology</item>
-        <item>Hematology</item>
-        <item>Infectious Disease</item>
-        <item>Infertility</item>
-        <item>Intervention Radiology</item>
-        <item>Microbiology</item>
-        <item>Medical Oncology</item>
-        <item>Medical GI</item>
-        <item>Neonatology</item>
-        <item>Nephrology</item>
-        <item>Neurology</item>
-        <item>Neurosurgery</item>
-        <item>OBJ</item>
-        <item>Opthalmologist</item>
-        <item>Orthopedics</item>
+        <item>Select Speciality</item>
+        <item>Internal Medicine</item>
         <item>Pediatrics</item>
-        <item>Pediatric Cardiologist</item>
-        <item>Plastic Surgery</item>
+        <item>Surgery</item>
+        <item>Obstetrics and Gynecology</item>
+        <item>Anesthesiology</item>
         <item>Psychiatry</item>
+        <item>Radiology</item>
+        <item>Emergency Medicine</item>
+        <item>Dermatology</item>
+        <item>Family Medicine</item>
+        <item>Ophthalmology</item>
+        <item>Pathology</item>
+        <item>Physical Medicine and Rehabilitation</item>
+        <item>Infectious Disease</item>
+        <item>Allergy and Immunology</item>
         <item>Pulmonology</item>
-        <item>Radiodiagnosis</item>
-        <item>Reproductive Medicine</item>
-        <item>Surgical GI</item>
-        <item>Surgical Oncology </item>
-        <item>Transplant Surgery</item>
-        <item>Trauma and Sports</item>
-        <item>Urology</item>
-        <item>Vascular Surgery</item>
-
+        <item>Nuclear Medicine</item>
+        <item>Otolaryngology (ENT)</item>
+        <item>Preventive Medicine</item>
+        <item>Microbiology</item>
+        <item>Pharmacology</item>
+        <item>Forensic Medicine</item>
+        <item>Physiology</item>
+        <item>Anatomy</item>
+        <item>Biochemistry</item>
+        <item>Duty Doctor</item>
 
     </string-array>
 
+    <!-- Subspecialities -->
+    <string-array name="subspeciality">
+        <item>Cardiology</item>
+        <item>Gastroenterology (M)</item>
+        <item>Nephrology</item>
+        <item>Pulmonology</item>
+        <item>Rheumatology</item>
+        <item>Endocrinology</item>
+        <item>Hematology</item>
+        <item>Sleep Medicine</item>
+        //......
+        <item>Neurology</item>
+        <item>Hepatology</item>
+        <item>Neonatology</item>
+        <item>Pediatric Cardiology</item>
+        <item>Pediatric Gastroenterology</item>
+        <item>Pediatric Nephrology</item>
+        <item>Pediatric Pulmonology</item>
+        <item>Pediatric Rheumatology</item>
+        <item>Pediatric Endocrinology</item>
+        <item>Pediatric Hemato-Oncology</item>
+        //......
+        <item>Cardiothoracic Surgery</item>
+        <item>Neurosurgery</item>
+        <item>Transplant Surgery</item>
+        <item>Pediatric Surgery</item>
+        <item>Plastic Surgery</item>
+        <item>Urology</item>
+        <item>Vascular Surgery</item>
+        <item>Gastroenterology (S)</item>
+        <item>Oncosurgery</item>
+        <item>Maternal-Fetal Medicine</item>
+        <item>Gynecologic Oncology</item>
+        <item>Reproductive Endocrinology and Infertility</item>
+        <item>Pain Medicine</item>
+        <item>Critical Care Medicine</item>
+        <item>Child and Adolescent Psychiatry</item>
+        <item>Geriatric Psychiatry</item>
+        <item>Neuro Radiology</item>
+        <item>Interventional Radiology</item>
+        <item>Sports Medicine</item>
+        <item>Hand Surgery</item>
+        <item>Clinical Hematology</item>
+        <item>Histopathology</item>
+        <item>Forensic Pathology</item>
+        <item>Transfusion Medicine</item>
+        <item>Clinical Pharmacology</item>
+        <!-- Add other subspecialities here -->
+    </string-array>
+
+    <!-- Specialities Jobs -->
+    <string-array name="specialityjobs">
+        <item>Allergy and Immunology</item>
+        <item>Anatomy</item>
+        <item>Anesthesiology</item>
+        <item>Biochemistry</item>
+        <item>Dermatology</item>
+        <item>Emergency Medicine</item>
+        <item>Family Medicine</item>
+        <item>Forensic Medicine</item>
+        <item>Infectious Disease</item>
+        <item>Internal Medicine</item>
+        <item>Microbiology</item>
+        <item>Nuclear Medicine</item>
+        <item>Obstetrics and Gynecology</item>
+        <item>Ophthalmology</item>
+        <item>Otolaryngology (ENT)</item>
+        <item>Pathology</item>
+        <item>Pediatrics</item>
+        <item>Pharmacology</item>
+        <item>Physical Medicine and Rehabilitation</item>
+        <item>Physiology</item>
+        <item>Preventive Medicine</item>
+        <item>Psychiatry</item>
+        <item>Pulmonology</item>
+        <item>Radiology</item>
+        <item>Surgery</item>
+        <item>Duty Doctor</item>
+
+        <!-- Add other specialities here -->
+    </string-array>
+
+    <!-- Speciality-Subspeciality mapping -->
+    <array name="speciality_subs">
+        <item name="Pediatrics">Cardiology</item>
+        <item name="Pediatrics">Gastroenterology (M)</item>
+        <item name="Pediatrics">Nephrology</item>
+        <!-- Add mappings for other specialities and subspecialities here -->
+    </array>
+
     <string-array name="mode">
-        <item>-Select mode-</item>
+        <item>Select mode</item>
         <item>Online</item>
         <item>Offline</item>
 
     </string-array>
+    <string-array name="ugtype">
+        <item>Select mode</item>
+        <item>TextBook</item>
+        <item>Resources</item>
+
+    </string-array>
+    <string-array name="Job_type">
+        <item>Select Type</item>
+        <item>Regular</item>
+        <item>Locum</item>
+
+    </string-array>
+
+    <string-array name="age">
+        <item>Select age</item>
+        <item>less than > 18</item>
+        <item>18 to 25</item>
+        <item>25 to 40</item>
+        <item>40 to 60</item>
+        <item>more than 60</item>
+
+    </string-array>
+
+    <string-array name="experience">
+        <item>Select Experience</item>
+        <item>-Fresher</item>
+        <item>-Experienced</item>
+    </string-array>
 
 
-        <string-array name="indian_cities">
-                <item>-Select city-</item>
-                <item>New Delhi</item>
-                <item>Mumbai</item>
-                <item>Bangalore</item>
-                <item>Chennai</item>
-                <item>Kolkata</item>
-                <item>Hyderabad</item>
-                <item>Jaipur</item>
-                <item>Pune</item>
-                <item>Ahmedabad</item>
-                <item>Chandigarh</item>
-                <item>Varanasi</item>
-        </string-array>
+    <string-array name="indian_cities">
+        <item>Select State</item>
+        <item>Andhra Pradesh</item>
+        <item>Arunachal Pradesh</item>
+        <item>Assam</item>
+        <item>Bihar</item>
+        <item>Delhi</item>
+        <item>Chhattisgarh</item>
+        <item>Goa</item>
+        <item>Gujarat</item>
+        <item>Haryana</item>
+        <item>Himachal Pradesh</item>
+        <item>Jharkhand</item>
+        <item>Karnataka</item>
+        <item>Kerala</item>
+        <item>Madhya Pradesh</item>
+        <item>Maharashtra</item>
+        <item>Manipur</item>
+        <item>Meghalaya</item>
+        <item>Mizoram</item>
+        <item>Nagaland</item>
+        <item>Odisha</item>
+        <item>Punjab</item>
+        <item>Rajasthan</item>
+        <item>Sikkim</item>
+        <item>Tamil Nadu</item>
+        <item>Telangana</item>
+        <item>Tripura</item>
+        <item>Uttar Pradesh</item>
+        <item>Uttarakhand</item>
+        <item>West Bengal</item>
+    </string-array>
 
 
-        <string-array name="indian_medical_universities">
-                <item>-Select university-</item>
-                <item>All India Institute of Medical Sciences (AIIMS)</item>
-                <item>Armed Forces Medical College (AFMC)</item>
-                <item>Christian Medical College (CMC), Vellore</item>
-                <item>Post Graduate Institute of Medical Education and Research (PGIMER)</item>
-                <item>Jawaharlal Institute of Postgraduate Medical Education and Research (JIPMER)</item>
-                <item>King George\'s Medical University (KGMU)</item>
-                <item>Banaras Hindu University (BHU) - Institute of Medical Sciences</item>
-                <item>Madras Medical College (MMC)</item>
-                <item>Grant Medical College and Sir JJ Group of Hospitals</item>
-                <item>Seth GS Medical College (GSMC)</item>
-                <item>Kasturba Medical College (KMC)</item>
-                <item>AIIMS Delhi (All India Institute of Medical Sciences)</item>
-        </string-array>
+    <string-array name="indian_medical_council">
+        <item>Select State</item>
+        <item>Andhra Pradesh  Medical Council</item>
+        <item>Arunachal Pradesh  Medical Council</item>
+        <item>Assam Medical Council</item>
+        <item>Bihar Medical Council</item>
+        <item>Chhattisgarh Medical Council</item>
+        <item>Delhi Medical Council</item>
+        <item>Delhi Dental Council</item>
+        <item>Goa Medical Council</item>
+        <item>Gujarat Medical Council</item>
+        <item>Haryana State Dental &amp; Medical Council</item>
+        <item>Himachal Pradesh Medical Council</item>
+        <item>Jammu &amp; Kashmir Medical Council</item>
+        <item>Jharkhand Medical Council</item>
+        <item>Karnataka Medical Council</item>
+        <item>Kerala Medical Council</item>
+        <item>Madhya Pradesh Medical Council</item>
+        <item>Maharashtra Medical Council</item>
+        <item>Manipur Medical Council</item>
+        <item>Meghalaya Medical Council</item>
+        <item>Mizoram Medical Council</item>
+        <item>National Medical Council</item>
+        <item>Nagaland Medical Council</item>
+        <item>Odisha Medical Council</item>
+        <item>Punjab Medical Council</item>
+        <item>Rajasthan Medical Council</item>
+        <item>Sikkim Medical Council</item>
+        <item>Tamil Nadu Medical Council</item>
+        <item>Telangana Medical Council</item>
+        <item>Tripura Medical Council</item>
+        <item>Uttranchal Medical Council</item>
+        <item>Uttar Pradesh Medical Council</item>
+        <item>West Bengal Medical Council</item>
+    </string-array>
 
-        <string-array name="medical_subjects">
-                <item>-Select Subject-</item>
-                <item>Anatomy</item>
-                <item>Physiology</item>
-                <item>Biochemistry</item>
-                <item>Pathology</item>
-                <item>Microbiology</item>
-                <item>Pharmacology</item>
-                <item>Forensic Medicine</item>
-                <item>PSM (Preventive and Social Medicine)</item>
-                <item>Ophthalmology</item>
-                <item>ENT (Ear, Nose, and Throat)</item>
-                <item>Medicine</item>
-                <item>Surgery</item>
-                <item>Pediatrics</item>
-                <item>Orthopedics</item>
-                <item>PG (Postgraduate)</item>
-                <item>Ever (Evergreen)</item>
-                <item>Psychiatry</item>
-                <item>Radiology</item>
-                <item>Dermatology</item>
-                <item>Statistics</item>
-        </string-array>
 
+    <string-array name="indian_medical_universities">
+        <item>Select university</item>
+        <item>All India Institute of Medical Sciences (AIIMS)</item>
+        <item>Armed Forces Medical College (AFMC)</item>
+        <item>Christian Medical College (CMC), Vellore</item>
+        <item>Post Graduate Institute of Medical Education and Research (PGIMER)</item>
+        <item>Jawaharlal Institute of Postgraduate Medical Education and Research (JIPMER)</item>
+        <item>King George\'s Medical University (KGMU)</item>
+        <item>Banaras Hindu University (BHU) - Institute of Medical Sciences</item>
+        <item>Madras Medical College (MMC)</item>
+        <item>Grant Medical College and Sir JJ Group of Hospitals</item>
+        <item>Seth GS Medical College (GSMC)</item>
+        <item>Kasturba Medical College (KMC)</item>
+        <item>AIIMS Delhi (All India Institute of Medical Sciences)</item>
+    </string-array>
+
+    <string-array name="medical_subjects">
+        <item>Anatomy</item>
+        <item>Biochemistry</item>
+        <item>Dermatology</item>
+        <item>ENT (Ear, Nose, and Throat)</item>
+        <item>Ever (Evergreen)</item>
+        <item>Forensic Medicine</item>
+        <item>Medicine</item>
+        <item>Microbiology</item>
+        <item>Orthopedics</item>
+        <item>Ophthalmology</item>
+        <item>Pathology</item>
+        <item>Pediatrics</item>
+        <item>Pharmacology</item>
+        <item>Physiology</item>
+        <item>PG (Postgraduate)</item>
+        <item>PSM (Preventive and Social Medicine)</item>
+        <item>Psychiatry</item>
+        <item>Radiology</item>
+        <item>Select Subject</item>
+        <item>Statistics</item>
+
+    </string-array>
+
+    <string name="title_activity_publication">PublicationActivity</string>
+
+    <string name="title_activity_cme_state_changer">CmeStateChanger</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="anatomy">Anatomy</string>
+    <string name="physiology">Physiology</string>
+    <string name="biochemistry">Biochemistry</string>
+    <string name="pathology">Pathology</string>
+    <string name="microbiology">Microbiology</string>
+    <string name="pharmology">Pharmology</string>
+    <string name="pharmacology">Pharmacology</string>
+    <string name="forensic_medicine">Forensic Medicine</string>
+    <string name="psm">PSM</string>
+    <string name="opthalmologgy">Opthalmologgy</string>
+    <string name="ent">ENT</string>
+    <string name="medicine">Medicine</string>
+    <string name="surgery">Surgery</string>
+    <string name="obg">OBG</string>
+    <string name="pediatrics">Pediatrics</string>
+    <string name="orthopedics">Orthopedics</string>
+    <string name="psuchiatry">Psuchiatry</string>
+    <string name="radiology">Radiology</string>
+    <string name="dermatology">Dermatology</string>
+    <string name="statistics">Statistics</string>
+    <string name="recommended_jobs">Recommended Jobs</string>
+    <string name="view_all">View All</string>
+    <string name="add_cme">Add CME</string>
+    <string name="ongoing">Ongoing</string>
+    <string name="see_all">See All</string>
+    <string name="past">Past</string>
+    <string name="presenters_of_the_month">Presenters of the month</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="title_activity_drawer">DrawerActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_notification">Notification</string>
+    <string name="menu_logout">Logout</string>
+    <string name="this_feature_is_nunder_construction">This feature is\nUnder Construction</string>
+    <string name="todo">TODO</string>
+    <string name="name">Name</string>
+    <string name="example_example_com">example@example.com</string>
+    <string name="fill_the_following_details_and_post_your_cme">Fill the following details and post your CME…</string>
+    <string name="title_of_the_cme">Title of the CME</string>
+    <string name="organiser">Organiser</string>
+    <string name="presenter">Presenter</string>
+    <string name="description">Description</string>
+    <string name="_0_2000">0/2000</string>
+    <string name="create_a_random_room_code_to_organize_your_cme">Create a Zoom Link and Attach the Link</string>
+    <string name="virtual_link_code">Virtual Link Code</string>
+    <string name="place_if_offline">Place(if offline)</string>
+    <string name="pick_date">Pick Date</string>
+    <string name="pick_time">Pick Time</string>
+    <string name="selected_date">Selected Date:</string>
+    <string name="selected_time">Selected Time:</string>
+    <string name="attach_a_document">Attach a Document</string>
+    <string name="upload">Upload</string>
+    <string name="post">Post</string>
+    <string name="textview">TextView</string>
+    <string name="author">Author</string>
+    <string name="verification_pending">Verification Pending</string>
+    <string name="got_it">Got it</string>
+    <string name="skip">Skip</string>
+    <string name="about">You\'ll be notified onc.</string>
+    <string name="pending">Verification Pending</string>
+    <string name="today_s_quiz_is_done">Today\'s Quiz is Done!</string>
+    <string name="_21_10_2003">21/10/2003</string>
+
+    <string name="taptarget">This is the Complete code</string>
+
+    <string-array name="prefix_options">
+        <item>Select Designation</item>
+        <item>Dr</item>
+        <item>HR</item>
+        <item>Nr</item>
+    </string-array>
+
+    <string-array name="prefix_icons">
+        <item>@drawable/dr</item>
+        <item>@drawable/hr</item>
+        <item>@drawable/nurse</item>
+    </string-array>
+
+    <string-array name="prefix_full">
+        <item>Doctor</item>
+        <item>Human Resource</item>
+        <item>Nurse</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Trans Gender</item>
+    </string-array>
+
+    <string-array name="timeline">
+        <item>Week</item>
+        <item>Month</item>
+        <item>Year</item>
+    </string-array>
+
+    <string-array name="country_codes">
+        <item>+91</item> <!-- India -->
+    </string-array>
+
+    <string-array name="salary_type">
+        <item>Select Type</item>
+        <item>/Yearly</item>
+        <item>/Monthly</item>
+        <item>/Weekly</item>
+        <item>/Hourly</item>
+    </string-array>
+
+
+    <string name="app_name1">Onboarding Practice</string>
+    <string name="screen1"> Doctors Connect, Learn, Grow.</string>
+    <string name="screen2">Med Pros Exclusive Hub</string>
+    <string name="screen3">Recruitment Partner for Healthcare Sector</string>
+    <string name="screen1desc">It’s a transformative hub wh.</string>
+    <string name="screen2desc">mymedicos: India\'s Premier Affordable App for NEET PG, FMGE, NEET SS</string>
+    <string name="screen3desc">Our team is. </string>
+    <string name="startDesc">Efficient administrative support, .</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor
+    </string>
 
 </resources>

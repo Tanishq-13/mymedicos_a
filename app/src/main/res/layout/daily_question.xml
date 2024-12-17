@@ -1,0 +1,45 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:elevation="4dp"
+    android:background="@drawable/card_border">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/backofpgmaterials"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_7sdp"
+        android:paddingVertical="@dimen/_6sdp">
+
+        <!-- Question TextView -->
+        <TextView
+            android:id="@+id/questionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/inter_semibold"
+            android:text="According to the Medical Community, Which muscle is the primary extensor of the hip?"
+            android:textSize="@dimen/_11ssp"
+            android:textColor="@android:color/black"
+            android:layout_gravity="center_vertical" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/solveNowButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/questionTextView"
+            android:layout_alignEnd="@+id/questionTextView"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="0dp"
+            android:padding="@dimen/_2ssp"
+            android:background="@drawable/button_bcg"
+            android:minHeight="@dimen/_5ssp"
+            android:text="Solve now"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

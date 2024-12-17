@@ -1,0 +1,8 @@
+<!-- res/drawable/custom_thumb_active.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="5dp" />
+    <size
+        android:width="40dp"
+        android:height="5dp" />
+    <solid android:color="@color/black" /> <!-- Set your desired background color for active state -->
+</shape>

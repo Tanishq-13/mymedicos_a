@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundcolor"
+    android:layout_height="match_parent"
+    tools:context=".activities.home.sidedrawer.SettingsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/settingstoolbar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/settingsstoolbar"
+            app:title="Settings"
+            app:navigationIcon="@drawable/arrow_bk"
+            app:titleTextColor="@color/unselected"
+            app:subtitleTextColor="@color/white"
+            app:subtitleTextAppearance="@color/white"
+            android:backgroundTint="@color/backgroundcolor"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white">
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/termsandconditions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/_15ssp"
+        android:paddingHorizontal="@dimen/_15ssp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Terms &amp; Conditions"
+            android:textColor="#5C6160"
+            android:textSize="@dimen/_14sdp"
+            android:fontFamily="@font/inter"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrowright"
+            android:layout_gravity="end"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/privacypage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/_15ssp"
+        android:paddingHorizontal="@dimen/_15ssp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Privacy Policies"
+            android:textColor="#5C6160"
+            android:textSize="@dimen/_14sdp"
+            android:fontFamily="@font/inter"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:textAlignment="gravity"
+            android:paddingVertical="@dimen/_2ssp"
+            android:gravity="center"
+            android:background="@drawable/categoryblackkkkkk"
+            android:fontFamily="@font/inter"
+            android:textSize="@dimen/_14ssp"
+            android:layout_height="wrap_content"
+            android:text="View"
+            android:textColor="@color/unselected"
+            android:layout_gravity="end"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/_15ssp"
+        android:paddingHorizontal="@dimen/_15ssp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="App Version"
+            android:textColor="#5C6160"
+            android:textSize="@dimen/_14sdp"
+            android:fontFamily="@font/inter"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:textAlignment="gravity"
+            android:paddingVertical="@dimen/_2ssp"
+            android:gravity="center"
+            android:fontFamily="@font/inter"
+            android:textSize="@dimen/_14ssp"
+            android:layout_height="wrap_content"
+            android:text="1.0.0"
+            android:textColor="@color/unselected"
+            android:layout_gravity="end"/>
+
+    </LinearLayout>
+
+</LinearLayout>

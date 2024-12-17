@@ -1,36 +1,47 @@
 {
   "project_info": {
-    "project_number": "78883571163",
-    "project_id": "mymedicos-a5ecc",
-    "storage_bucket": "mymedicos-a5ecc.appspot.com"
+    "project_number": "968103235749",
+    "firebase_url": "https://mymedicosupdated-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "mymedicosupdated",
+    "storage_bucket": "mymedicosupdated.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:78883571163:android:59a867c731336fae3f13fe",
+        "mobilesdk_app_id": "1:968103235749:android:a890fec6774c6facedbd4c",
         "android_client_info": {
-          "package_name": "com.example.my_medicos"
+          "package_name": "com.medical.my_medicos"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "78883571163-h8lj3n1s4j43mrh5tedroq423i4u0v59.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDozGir2yyUN0NsbuQ37pjYuahWuwhRasA"
+          "current_key": "AIzaSyAbdFEUVSuIPGbIPk5VfF6EI88QHtch1Jo"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "78883571163-h8lj3n1s4j43mrh5tedroq423i4u0v59.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
+        }
+      },
+      "admob_app_id": "ca-app-pub-1452770494559845~3220735688"
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:968103235749:android:1da2a3ce0085b4afedbd4c",
+        "android_client_info": {
+          "package_name": "com.medicos.medicosuniversityadmin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbdFEUVSuIPGbIPk5VfF6EI88QHtch1Jo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
         }
       }
     }

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    android:layout_marginVertical="@dimen/_5sdp"
+    android:layout_marginHorizontal="@dimen/_5sdp"
+    tools:context=".activities.pg.activites.internalfragments.MePgFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:background="@color/backgroundcolor"
+            android:layout_height="wrap_content"
+            android:text="Student Portal"
+            android:fontFamily="@font/inter_semibold"
+            android:gravity="start"
+            android:textColor="@color/unselected"
+            android:layout_gravity="center_vertical"
+            android:paddingVertical="@dimen/_2ssp"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:background="@color/backgroundcolor"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_5ssp"
+            android:text="Get Detailed info about your profile and exams you attended."
+            android:fontFamily="@font/inter"
+            android:textColor="@color/unselected"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="normal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:paddingVertical="@dimen/_5ssp"
+            android:elevation="@dimen/_10ssp"
+            android:layout_gravity="center"
+            android:gravity="start"
+            android:paddingHorizontal="@dimen/_10ssp"
+            android:background="@drawable/backofpgmaterials"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/_50ssp"
+                android:id="@+id/profilepicture"
+                android:layout_height="@dimen/_50ssp"
+                android:src="@drawable/placeholder"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_8ssp"
+                android:layout_gravity="start"
+                android:gravity=""
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/currentusernamewillcomehere"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_semibold"
+                    android:paddingHorizontal="@dimen/_10ssp"
+                    android:text="Loading.."
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/currentuseremailid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Loading.."
+                    android:textColor="@color/unselected"
+                    android:paddingHorizontal="@dimen/_10ssp"
+                    android:textStyle="normal"
+                    android:fontFamily="@font/inter"
+                    android:textSize="@dimen/_10ssp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:paddingVertical="@dimen/_5ssp"
+            android:layout_gravity="center"
+            android:gravity="start"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:paddingHorizontal="@dimen/_10ssp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/interest01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loading.."
+                android:background="@drawable/categoryblackkkkkk"
+                android:textColor="@color/unselected"
+                android:paddingHorizontal="@dimen/_10ssp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:textStyle="normal"
+                android:fontFamily="@font/inter"
+                android:textSize="@dimen/_10ssp"/>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="@dimen/_5ssp"
+                app:dividerColor="@color/white"
+                app:dividerThickness="@dimen/_1ssp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/interest02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/categoryblackkkkkk"
+                android:text="Loading.."
+                android:textColor="@color/unselected"
+                android:paddingHorizontal="@dimen/_10ssp"
+                android:textStyle="normal"
+                android:fontFamily="@font/inter"
+                android:textSize="@dimen/_10ssp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Checkout"
+            android:paddingVertical="@dimen/_5sdp"
+            android:textStyle="normal"
+            android:fontFamily="@font/inter_semibold"
+            android:textSize="@dimen/_14ssp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:paddingVertical="@dimen/_5ssp"
+            android:elevation="@dimen/_10ssp"
+            android:layout_gravity="center"
+            android:gravity="start"
+            android:paddingHorizontal="@dimen/_10ssp"
+            android:background="@drawable/backofpgmaterials"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/_25ssp"
+                android:layout_height="@dimen/_25ssp"
+                android:src="@drawable/history"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_3ssp"
+                android:layout_gravity="start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="History"
+                    android:paddingHorizontal="@dimen/_10ssp"
+                    android:textStyle="normal"
+                    android:fontFamily="@font/inter"
+                    android:textSize="@dimen/_14ssp"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/Interestbasedsuggestion01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Interest 01"
+            android:paddingVertical="@dimen/_5sdp"
+            android:textStyle="normal"
+            android:fontFamily="@font/inter_semibold"
+            android:textSize="@dimen/_14ssp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/Interest01Exams"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"/>
+
+        <TextView
+            android:id="@+id/Interestbasedsuggestion02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Interest 02"
+            android:paddingVertical="@dimen/_5sdp"
+            android:textStyle="normal"
+            android:fontFamily="@font/inter_semibold"
+            android:textSize="@dimen/_14ssp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/Interest02Exams"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"/>
+
+    </LinearLayout>
+
+</ScrollView>
